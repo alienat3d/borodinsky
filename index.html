@@ -1,122 +1,126 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Барбершоп «Бородинский»</title>
+  
+  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="images/icons/180.png">
+  <link rel="manifest" href="manifest.webmanisfest">
 </head>
 
-<body>
+<body class="page-body">
 
   <!-- === HEADER === -->
-  <header class="header">
-    <nav class="navigation">
-      <a class="logo">
-        <img class="logo__image" src="img/index-logo.svg" width="368" height="153"
-          alt="Логотип барбершопа «Бородинский»">
+  <header class="main-header">
+    <nav class="main-navigation">
+      <a class="main-header-logo">
+        <img src="img/index-logo.svg" width="368" height="153" alt="Логотип барбершопа «Бородинский»">
       </a>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
+      <ul class="site-navigation">
+        <li>
+          <a href="blank.html">
             Информация
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
+        <li>
+          <a href="blank.html">
             Новости
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="price.html">
+        <li>
+          <a href="price.html">
             Прайс-лист
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="catalog.html">
+        <li>
+          <a href="catalog.html">
             Магазин
           </a>
         </li>
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
+        <li>
+          <a href="blank.html">
             Контакты
           </a>
         </li>
       </ul>
-      <a class="navigation__login" href="blank.html">
-        Вход
-      </a>
+        <a class="login-link" href="blank.html">
+          Вход
+        </a>
     </nav>
   </header>
   <!-- === / HEADER === -->
 
-  <main class="content">
-    <h1 class="main-title">
+  <main class="container">
+    <h1>
       Барбершоп «Бородинский»
     </h1>
-    <!-- === ADVANTAGES === -->
-    <section class="advantages">
-      <h2 class="advantages__title">
+    <!-- === FEATURES === -->
+    <section class="features">
+      <h2>
         Преимущества
       </h2>
-      <ul class="advantages__list">
-        <li class="advantages__item">
-          <h3 class="advantages__item-title">
+      <ul class="features-list">
+        <li class="feature-item">
+          <h3>
             БЫСТРО
           </h3>
-          <p class="advantages__item-text">
+          <p>
             МЫ ДЕЛАЕМ СВОЮ РАБОТУ БЫСТРО! ДВА ЧАСА ПРОЛЕТЯТ НЕЗАМЕТНО И ВЫ — СЧАСТЛИВЫЙ ОБЛАДАТЕЛЬ СТИЛЬНОЙ
             СТРИЖКИ-МИНУТКИ!
           </p>
         </li>
-        <li class="advantages__item">
-          <h3 class="advantages__item-title">
+        <li class="feature-item">
+          <h3>
             КРУТО
           </h3>
-          <p class="advantages__item-text">
+          <p>
             ЗАБУДЬТЕ, КАК ВЫ СТРИГЛИСЬ РАНЬШЕ.
             МЫ СДЕЛАЕМ ИЗ ВАС ЗВЕЗДУ ФУТБОЛА ИЛИ КИНО! ВО ВСЯКОМ СЛУЧАЕ ВНЕШНЕ.
           </p>
         </li>
-        <li class="advantages__item">
-          <h3 class="advantages__item-title">
+        <li class="feature-item">
+          <h3>
             ДОРОГО
           </h3>
-          <p class="advantages__item-text">
+          <p>
             НАШИ МАСТЕРА — ПРОФЕССИОНАЛЫ СВОЕГО ДЕЛА И НЕ МОГУТ СТОИТЬ ДЕШЕВО. К ТОМУ ЖЕ, РАЗВЕ ЦЕНА НЕ ДАЕТ
             ОПРЕДЕЛЕННЫЙ СТАТУС?
           </p>
         </li>
       </ul>
     </section>
-    <!-- === / ADVANTAGES === -->
+    <!-- === / FEATURES === -->
 
     <!-- === NEWS === -->
     <section class="news">
       <h2 class="news__title">
         НОВОСТИ
       </h2>
-      <ul class="news__list">
-        <li class="news__news__list-item">
-          <p class="news__text">
+      <ul class="news-list">
+        <li class="news-item">
+          <p>
             НАМ НАКОНЕЦ ЗАВЕЗЛИ ЯГЕРМАЙСТЕР! ТЕПЕРЬ ВЫ МОЖЕТЕ ПРОПУСТИТЬ СТАКАНЧИК ВО ВРЕМЯ СТРИЖКИ
           </p>
-          <time class="news__date" datetime="2021-09-05">
+          <time datetime="2021-09-05">
             5 сентября
           </time>
         </li>
-        <li class="news__news__list-item">
-          <p class="news__text">
+        <li class="news-item">
+          <p>
             В НАШЕЙ КОМАНДЕ ПОПОЛНЕНИЕ, БОРИС «БРИТВА» СТРИГУНЕЦ, ОБЛАДAТЕЛЬ МНОЖЕСТВА ТИТУЛОВ И НАГРАД ПОПОЛНИЛ НАШИ
             СТРОЙНЫЕ РЯДЫ
           </p>
-          <time class="news__date" datetime="2021-08-20">
+          <time datetime="2021-08-20">
             20 августа
           </time>
         </li>
       </ul>
-      <a class="news__link">
+      <a class="button">
         ВСЕ НОВОСТИ
       </a>
     </section>
@@ -124,19 +128,18 @@
 
     <!-- === GALLERY === -->
     <section class="gallery">
-      <h2 class="gallery__title">
+      <h2>
         ФОТОГАЛЕРЕЯ
       </h2>
-      <figure class="gallery__figure">
-        <a class="gallery__link" href="#">
-          <img class="gallery__image" src="images/gallery/barbershop-inside-room.jpg" width="286" height="164"
-            alt="Интерьер">
+      <figure class="gallery-content">
+        <a href="#">
+          <img src="images/gallery/barbershop-inside-room.jpg" width="286" height="164" alt="Интерьер">
         </a>
       </figure>
-      <button class="gallery__button" type="button" disabled>
+      <button class="button gallery-button gallery-button-previous" type="button" disabled>
         Назад
       </button>
-      <button class="gallery__button" type="button">
+      <button class="button gallery-button gallery-button-next" type="button">
         Вперёд
       </button>
     </section>
@@ -144,16 +147,16 @@
 
     <!-- === CONTACTS === -->
     <section class="contacts">
-      <h2 class="contacts__title">
+      <h2>
         КОНТАКТНАЯ ИНФОРМАЦИЯ
       </h2>
       <p class="contacts__name">
         БАРБЕРШОП «БОРОДИНСКИЙ»
       </p>
-      <address class="contacts__address">
+      <address>
         АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, Б. КОНЮШЕННАЯ, Д. 19/8
       </address>
-      <a class="contacts__phone" href="tel:+78126660266">
+      <a class="contacts-phone" href="tel:+78126660266">
         ТЕЛЕФОН: +7 (812) 666-02-66
       </a>
       <p class="contacts__text">
@@ -161,65 +164,99 @@
         ПН—ПТ: С 10:00 ДО 22:00
         СБ—ВС: С 10:00 ДО 19:00
       </p>
-      <a class="contacts__link" href="blank.html">
+      <a class="button" href="blank.html">
         КАК ПРОЕХАТЬ
       </a>
-      <a class="contacts__link" href="blank.html">
+      <a class="button" href="blank.html">
         ОБРАТНАЯ СВЯЗЬ
       </a>
     </section>
     <!-- === / CONTACTS === -->
 
-    <!-- === SIGN-UP === -->
-    <section class="sign-up">
-      <h2 class="sign-up__title">
+    <!-- === APPOINTMENT === -->
+    <section class="appointment">
+      <h2>
         ЗАПИСАТЬСЯ
       </h2>
-      <form class="sign-up__form">
-        <p class="sign-up__form-desc">
-          УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
+      <p class="appointment-info">
+        УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
+      </p>
+      <form class="appointment-form" action="https://echo.site.ru" method="POST">
+        <p class="appointment-item">
+          <label for="appointment-date">
+            Дата
+          </label>
+          <input id="appointment-date" type="text" name="date" placeholder="01.01.2021">
         </p>
-        <!-- Здесь будет форма записи -->
+        <p class="appointment-item">
+          <label for="appointment-time">
+            Время
+          </label>
+          <input id="appointment-time" type="text" name="time" placeholder="10:00">
+        </p>
+        <p class="appointment-item">
+          <label for="appointment-name">
+            Ваше имя
+          </label>
+          <input id="appointment-name" type="text" name="name" placeholder="Иван Иванов">
+        </p>
+        <p class="appointment-item">
+          <label for="appointment-phone">
+            Телефон
+          </label>
+          <input id="appointment-phone" type="tel" name="phone" placeholder="+7 000 000-00-00">
+        </p>
+        <button class="button" type="submit">
+          Отправить
+        </button>
       </form>
     </section>
-    <!-- === / SIGN-UP === -->
+    <!-- === / APPOINTMENT === -->
   </main>
   <!-- === FOOTER === -->
-  <footer class="footer">
-    <section class="footer__location">
-      <h2 class="footer__location-title">
+  <footer class="main-footer">
+    <section class="footer-contacts">
+      <h2>
         Как нас найти
       </h2>
-      <p class="footer__location-name">
+      <p>
         БАРБЕРШОП «БОРОДИНСКИЙ»
       </p>
-      <address class="footer__location-address">
+      <address class="footer-address">
         АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8
       </address>
-      <a class="footer__location-link" href="blank.html">
+      <a href="blank.html">
         КАК НАС НАЙТИ?
       </a>
-      <a class="footer__location-phone" href="tel:+78126660266">ТЕЛЕФОН: +7 (812) 666-02-66</a>
+      <a class="footer-phone" href="tel:+78126660266">ТЕЛЕФОН: +7 (812) 666-02-66</a>
     </section>
 
-    <section class="footer__social">
-      <h2 class="footer__social-title">
+    <section class="footer-social">
+      <h2>
         ДАВАЙТЕ ДРУЖИТЬ!
       </h2>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="#">
-            <img class="footer__social-image" src="" alt="">
+      <ul>
+        <li>
+          <a class="social-button" href="#">
+            Вконтакте
+          </a>
+        </li>
+        <li>
+          <a class="social-button" href="#">
+            Фейсбук
+          </a>
+        </li>
+        <li>
+          <a class="social-button" href="#">
+            Инстаграм
           </a>
         </li>
       </ul>
     </section>
 
-    <p class="footer__developed">
-      <p class="footer__developed-text">
+    <p class="footer-copyright">
         РАЗРАБОТАНО:
-      </p>
-      <a class="footer__developed-link" href="#">
+      <a class="button" href="#">
         Al Tsaplin
       </a>
     </p>
@@ -227,52 +264,52 @@
   <!-- === / FOOTER === -->
 
   <!-- === LOG-IN POP-UP === -->
-  <section class="log-in-pop-up">
-    <h2 class="log-in-pop-up__title">
+  <section class="modal">
+    <h2>
       Личный кабинет
     </h2>
-    <p class="log-in-pop-up__desc">
+    <p class="modal-description">
       Введите пожалуйста свой логин и пароль
     </p>
-    <form class="log-in-pop-up__form" action="https://echo.barbershop.ru" method="POST">
+    <form class="login-form" action="https://echo.barbershop.ru" method="POST">
       <p>
         <label for="login-login">
           Логин
         </label>
-        <input id="login-login" class="log-in-pop-up__input" type="email" name="login" placeholder="email@example.com">
+        <input id="login-login" class="login-icon-user" type="email" name="login" placeholder="email@example.com">
       </p>
       <p>
         <label for="login-password">
           Пароль
         </label>
-        <input id="login-password" class="log-in-pop-up__input" type="password" name="password" placeholder="••••••••">
+        <input id="login-password" class="login-icon-password" type="password" name="password" placeholder="••••••••">
       </p>
       <p>
-        <label>
-          <input class="log-in-pop-up__checkbox" type="checkbox" name="remember">
+        <label class="login-checkbox">
+          <input type="checkbox" name="remember">
           ЗАПОМНИТЕ МЕНЯ
         </label>
-        <a class="log-in-pop-up__link" href="blank.html">
+        <a class="restore" href="blank.html">
           Я ЗАБЫЛ ПАРОЛЬ!
         </a>
       </p>
-      <button class="log-in-pop-up__login-btn" type="submit">
+      <button class="button" type="submit">
         ВОЙТИ
       </button>
     </form>
-    <button class="log-in-pop-up__close-btn" type="button">
+    <button class="modal-close" type="button">
       Закрыть
     </button>
   </section>
   <!-- === / LOG-IN POP-UP === -->
 
   <!-- === MAP POP-UP === -->
-  <section class="map-pop-up">
-    <h2 class="map-pop-up__title">
+  <section class="modal">
+    <h2>
       Как до нас добраться
     </h2>
     <!-- Здесь будет карта -->
-    <button class="map-pop-up__close-btn">
+    <button class="modal-close" type="button">
       Закрыть
     </button>
   </section>
