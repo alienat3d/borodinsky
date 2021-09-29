@@ -50,19 +50,13 @@ img {
   font-weight: 700;
   color: var(--basic-white);
   text-transform: uppercase;
+}
+
+.page-body .page-index {
   background-color: var(--basic-black);
   background-image: url('../images/background.jpg');
   background-position: top center;
   background-repeat: no-repeat;
-}
-
-/* sticky footer */
-.page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows:
-    min-content 1fr min-content;
-  align-content: start;
 }
 
 .container {
@@ -78,7 +72,34 @@ img {
   height: 100%;
 }
 
+/* sticky footer */
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows:
+    min-content 1fr min-content;
+  align-content: start;
+}
+
 /* === / GRID === */
+
+/* === GRID FOR PAGES === */
+.page-catalogue {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 60px;
+  align-content: start;
+}
+
+.page-catalogue .page-title {
+  grid-column: 1 / -1;
+}
+
+.page-catalogue .breadcrumbs {
+  margin-bottom: 40px;
+  grid-column: 1 / -1;
+}
+/* === / GRID FOR PAGES === */
 
 /* === MAIN HEADER === */
 .main-header {
@@ -128,6 +149,14 @@ img {
   padding: 0 10px;
 }
 
+.inner-page .main-navigation-wrapper {
+  grid-template-columns: 170px 1fr min-content;
+}
+
+.inner-page .main-header-logo {
+  order: 0;
+}
+
 .site-navigation {
   margin: 0;
   padding: 0;
@@ -157,7 +186,6 @@ img {
 
 /* === FEATURES === */
 .features {
-  outline-offset: -5px;
 }
 
 .features-list {
@@ -216,11 +244,12 @@ img {
   background-color: var(--basic-dark);
   border: 7px solid var(--basic-white);
 }
-
 /* === / GALLERY === */
 
 /* === BUTTON === */
 .button {
+  display: inline-block;
+  margin-right: 16px;
   font: inherit;
   text-align: center;
   color: var(--basic-white);
@@ -243,13 +272,66 @@ img {
   background-color: var(--basic-black);
 }
 
-/* === / BUTTON === */
+.inner-page {
+  color: var(--basic-black);
+  background-color: var(--basic-extra-light);
+  background-image: url('../images/pattern-light.jpg');
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.page-title{
+  margin: 0;
+  margin-bottom: 15px;
+  padding: 0;
+  font-size: 30px;
+  line-height: 42px;
+}
+
+/* BREADCRUMBS */
+.breadcrumbs{
+  list-style: none;
+}
+
+.breadcrumbs a {
+  color: var(--basic-black);
+}
+
+.breadcrumbs a:hover,
+.breadcrumbs a:focus{
+  text-decoration: underline;
+}
+
+.breadcrumbs-current{
+  color: var(--basic-dark);
+}
+
+/* Goods-Filter */
+.catalogue {
+}
+
+.catalogue-list{
+  list-style: none;
+}
+
+.catalogue-item{
+  background-color: var(--basic-extra-light);
+  box-shadow: 0 0 10px rgba(0,0,0,.1);
+}
+
+.catalogue-item a{
+  color: var(--basic-black);
+}
+
+.catalogue-item h3{
+font-size: 14px;
+line-height: 18px;
+}
 
 /* === CONTACTS === */
 .contacts-phone {
   color: inherit;
 }
-
 /* === / CONTACTS === */
 
 /* === APPOINTMENT === */
@@ -272,8 +354,6 @@ img {
 
 /* === MAIN FOOTER === */
 .main-footer {
-  outline: 5px solid rgba(200, 200, 155, .7);
-  outline-offset: -5px;
   margin-top: 65px;
   padding: 60px 0;
   color: var(--basic-white);
@@ -319,9 +399,9 @@ img {
 }
 
 .footer-copyright {
-    max-width: 150px;
-    margin: 0;
-    justify-self: end;
+  max-width: 150px;
+  margin: 0;
+  justify-self: end;
 }
 /* === / MAIN FOOTER === */
 
@@ -340,6 +420,7 @@ img {
   color: var(--basic-black);
   background-color: var(--basic-white);
 }
+
 /* === / SOCIAL BUTTONS === */
 
 /* === MODAL === */

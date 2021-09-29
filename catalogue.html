@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
   <meta charset="UTF-8">
@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Барбершоп «Бородинский»</title>
 
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/style.css">
 
   <link rel="icon" href="favicon.ico">
   <link rel="icon" href="images/icons/icon.svg" type="image/svg+xml">
@@ -16,113 +16,126 @@
   <link rel="manifest" href="manifest.webmanisfest">
 </head>
 
-<body>
+<body class="page-body inner-page">
 
   <!-- === HEADER === -->
-  <header class="header">
-    <nav class="navigation">
-      <a class="logo" href="index.html">
-        <img class="logo__image" src="images/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
-      </a>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
-            Информация
+  <header class="main-header">
+    <nav class="main-navigation">
+      <div class="main-header-bar">
+        <div class="main-navigation-wrapper">
+          <a class="main-header-logo" href="index.html">
+            <img src="images/logo.svg" width="111" height="24" alt="Логотип барбершопа «Бородинский»">
           </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
-            Новости
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="price.html">
-            Прайс-лист
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="catalogue.html">
-            Магазин
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
-            Контакты
-          </a>
-        </li>
-      </ul>
-      <a class="navigation__login" href="blank.html">
-        Вход
-      </a>
+          <ul class="site-navigation">
+            <li>
+              <a href="blank.html">
+                Информация
+              </a>
+            </li>
+            <li>
+              <a href="blank.html">
+                Новости
+              </a>
+            </li>
+            <li>
+              <a href="price.html">
+                Прайс-лист
+              </a>
+            </li>
+            <li>
+              <a href="catalogue.html">
+                Магазин
+              </a>
+            </li>
+            <li>
+              <a href="blank.html">
+                Контакты
+              </a>
+            </li>
+          </ul>
+          <div class="user-navigation">
+            <a class="login-link" href="login.html">
+              Вход
+            </a>
+          </div>
+        </div>
+      </div>
     </nav>
   </header>
   <!-- === / HEADER === -->
 
-  <main class="content">
-    <h1>
+  <main class="page-catalogue container">
+
+    <h1 class="page-title">
       Средства для ухода
     </h1>
     <!-- === BREADCRUMBS === -->
     <ul class="breadcrumbs">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">
+      <li>
+        <a href="index.html">
           ГЛАВНАЯ
         </a>
       </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="catalogue.html">
+      <li>
+        <a href="catalogue.html">
           МАГАЗИН
         </a>
       </li>
-      <li class="breadcrumbs__item">
+      <li class="breadcrumbs-current">
         СРЕДСТВА ДЛЯ УХОДА
       </li>
     </ul>
     <!-- === / BREADCRUMBS === -->
 
     <!-- === GOODS FILTER === -->
-    <section class="goods-filter">
-      <h2 class="goods-filter__title">
+    <section class="filters page-catalogue">
+      <h2>
         Фильтр товаров
       </h2>
-      <form class="goods-filter__form" action="https://echo.website.ru" method="GET">
+      <form class="filter" action="https://echo.website.ru" method="GET">
         <fieldset>
           <legend>
             ПРОИЗВОДИТЕЛИ:
           </legend>
           <ul>
-            <li>
-              <input id="filter-baxter-of-california" type="checkbox" name="baxter-of-california" checked>
+            <li class="filter-option filter-checkbox">
+              <input id="filter-baxter-of-california" class="visually-hidden filter-input-checkbox filter-input"
+                type="checkbox" name="baxter-of-california" checked>
               <label for="filter-baxter-of-california">
                 Baxter of California
               </label>
             </li>
-            <li>
-              <input id="filter-mr-natty" type="checkbox" name="mr-natty">
+            <li class="filter-option filter-checkbox">
+              <input id="filter-mr-natty" class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                name="mr-natty">
               <label for="filter-mr-natty">
                 Mr Natty
               </label>
             </li>
-            <li>
-              <input id="filter-suavecito" type="checkbox" name="suavecito" checked>
+            <li class="filter-option filter-checkbox">
+              <input id="filter-suavecito" class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                name="suavecito" checked>
               <label for="filter-suavecito">
                 Suavecito
               </label>
             </li>
-            <li>
-              <input id="filter-malin-goetz" type="checkbox" name="malin-goetz">
+            <li class="filter-option filter-checkbox">
+              <input id="filter-malin-goetz" class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                name="malin-goetz">
               <label for="filter-malin-goetz">
                 Malin+Goetz
               </label>
             </li>
-            <li>
-              <input id="filter-murrays" type="checkbox" name="murrays">
+            <li class="filter-option filter-checkbox">
+              <input id="filter-murrays" class="visually-hidden filter-input-checkbox filter-input" type="checkbox"
+                name="murrays">
               <label for="filter-murrays">
                 Murray’s
               </label>
             </li>
-            <li>
-              <input id="filter-american-crew" type="checkbox" name="american-crew" checked>
+            <li class="filter-option filter-checkbox">
+              <input id="filter-american-crew" class="visually-hidden filter-input-checkbox filter-input"
+                type="checkbox" name="american-crew" checked>
               <label for="filter-american-crew">
                 American Crew
               </label>
@@ -154,7 +167,7 @@
             </li>
           </ul>
         </fieldset>
-        <button type="submit">
+        <button class="button" type="submit">
           ПОКАЗАТЬ
         </button>
       </form>
@@ -162,12 +175,12 @@
     <!-- === / GOODS FILTER === -->
 
     <!-- === GOODS LIST === -->
-    <section class="goods-list">
+    <section class="catalogue page-catalogue">
       <h2>
         Список средств для ухода
       </h2>
-      <ul>
-        <li>
+      <ul class="catalogue-list">
+        <li class="catalogue-item">
           <a href="product.html">
             <p>
               <img src="images/content/product-1.jpg" width="220" height="165"
@@ -179,12 +192,12 @@
           </a>
           <p>
             2 900 ₽
-            <button type="button">
+            <button class="button" type="button">
               КУПИТЬ
             </button>
           </p>
         </li>
-        <li>
+        <li class="catalogue-item">
           <a href="product.html">
             <p>
               <img src="images/content/product-2.jpg" width="220" height="165"
@@ -196,12 +209,12 @@
           </a>
           <p>
             750 ₽
-            <button type="button">
+            <button class="button" type="button">
               КУПИТЬ
             </button>
           </p>
         </li>
-        <li>
+        <li class="catalogue-item">
           <a href="product.html">
             <p>
               <img src="images/content/product-3.jpg" width="220" height="165"
@@ -213,12 +226,12 @@
           </a>
           <p>
             290 ₽
-            <button type="button">
+            <button class="button" type="button">
               КУПИТЬ
             </button>
           </p>
         </li>
-        <li>
+        <li class="catalogue-item">
           <a href="product.html">
             <p>
               <img src="images/content/product-4.jpg" width="220" height="165"
@@ -230,12 +243,12 @@
           </a>
           <p>
             500 ₽
-            <button type="button">
+            <button class="button" type="button">
               КУПИТЬ
             </button>
           </p>
         </li>
-        <li>
+        <li class="catalogue-item">
           <a href="product.html">
             <p>
               <img src="images/content/product-5.jpg" width="220" height="165"
@@ -247,12 +260,12 @@
           </a>
           <p>
             300 ₽
-            <button type="button">
+            <button class="button" type="button">
               КУПИТЬ
             </button>
           </p>
         </li>
-        <li>
+        <li class="catalogue-item">
           <a href="product.html">
             <p>
               <img src="images/content/product-6.jpg" width="220" height="165"
@@ -264,7 +277,7 @@
           </a>
           <p>
             3 900 ₽
-            <button type="button">
+            <button class="button" type="button">
               КУПИТЬ
             </button>
           </p>
