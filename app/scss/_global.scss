@@ -1,0 +1,148 @@
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+// -| GRID |-
+.page {
+  height: 100%;
+}
+
+.page-body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
+
+  min-width: 960px;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans Narrow", Arial, sans-serif;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  color: $basic-white;
+  text-transform: uppercase;
+  background-color: $basic-black;
+  background-image: url("../img/background.jpg");
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+// -|* Container *|-
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+// -|* Title *|-
+.title {
+  font-size: 30px;
+  line-height: 42px;
+}
+
+// === INDEX-COLUMNS ===
+.index-columns {
+  outline: 2px dotted greenyellow;
+  outline-offset: -2px;
+  margin-bottom: 35px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  color: $basic-black;
+  @include bg-pattern-light;
+}
+// === / INDEX-COLUMNS ===
+
+// === BUTTON ===
+.button {
+  border: none;
+  background-color: $basic-black;
+  vertical-align: middle;
+  font: inherit;
+  text-transform: uppercase;
+  text-align: center;
+  color: $basic-white;
+  cursor: pointer;
+}
+.button:hover,
+.button:focus,
+.button:active {
+  background-color: $special;
+}
+.button.disabled,
+.button:disabled {
+  cursor: default;
+  opacity: 0.5;
+  background-color: $basic-black;
+}
+// === / BUTTON ===
+
+// === BREADCRUMBS ===
+.breadcrumbs {
+  list-style: none;
+  grid-column: 1 / -1;
+  margin-bottom: 40px;
+
+  // .breadcrumbs__item--current
+  &__item--current {
+    color: $basic-dark;
+  }
+  // .breadcrumbs__link
+  &__link {
+    color: $basic-black;
+  }
+  &__link:hover,
+  &__link:focus {
+    text-decoration: underline;
+  }
+}
+// === / BREADCRUMBS ===
+
+// === MODAL ===
+.modal {
+  color: $basic-black;
+  background-color: $basic-extra-light;
+  @include bg-pattern-light;
+  box-shadow: $shadow-modal;
+}
+// =| LOG-IN |=
+.log-in-pop-up {
+  // .log-in-pop-up__input
+  &__input[type="email"],
+  &__input[type="password"] {
+    border: 2px solid $basic-black;
+    background-color: $basic-extra-light;
+    font: inherit;
+    color: $basic-black;
+    text-transform: uppercase;
+  }
+  &__input:focus {
+    border-color: $special;
+  }
+  // .log-in-pop-up__icon-user, .log-in-pop-up__icon-password
+  &__icon-user,
+  &__icon-password {
+    background-position: 270px center;
+    background-repeat: no-repeat;
+  }
+  // .log-in-pop-up__icon-user
+  &__icon-user {
+    background-image: url("../img/user.svg");
+  }
+  // .log-in-pop-up__icon-password
+  &__icon-password {
+    background-image: url("../img/lock.svg");
+  }
+  // .log-in-pop-up__link
+  &__link {
+    color: $basic-black;
+    text-decoration: underline;
+  }
+  &__link:hover,
+  &__link:focus {
+    text-decoration: none;
+  }
+}
+// === / MODAL ===

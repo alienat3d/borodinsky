@@ -1,0 +1,5 @@
+FIXME:
+-> Inputs inside of labels.
+
+TODO:
+-> Modal-map pops-up on <address> click.

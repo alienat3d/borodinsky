@@ -1,0 +1,386 @@
+// === -| IMPORTS |-  === //
+@import "../../node_modules/normalize.css/normalize.css"; //сброс стилей
+@import "variables"; //переменные
+@import "mixins"; //миксины
+@import "global"; //глобальные стили и многоразовые элементы
+// === / -| IMPORTS |-  === //
+
+// === HEADER ===
+.main-header {
+  margin-bottom: 70px;
+  outline: 2px dotted green;
+  outline-offset: -2px;
+  // .main-header__logo
+  &__logo {
+    order: 1;
+    justify-self: center;
+    outline: 2px dotted palevioletred;
+    outline-offset: -2px;
+  }
+  // .main-header__bar
+  &__bar {
+    background-color: $basic-black;
+  }
+}
+
+.main-navigation {
+  display: grid;
+  font-size: 16px;
+  line-height: 20px;
+  color: $basic-white;
+  background-color: transparent;
+
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    width: 940px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+.site-navigation {
+  outline: 2px dotted aquamarine;
+  outline-offset: -2px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  &__item--current .site-navigation__link:not([href]) {
+    border-bottom: 4px solid $basic-white;
+    background-color: $basic-black;
+  }
+}
+
+.site-navigation__link,
+.user-navigation__login-link {
+  color: $basic-white;
+}
+
+.site-navigation__link:hover,
+.site-navigation__link:focus,
+.user-navigation__login-link:hover,
+.user-navigation__login-link:focus {
+  background-color: $basic-extra-dark;
+}
+
+.user-navigation {
+  outline: 2px dotted orangered;
+  outline-offset: -2px;
+}
+// === / HEADER ===
+
+// === ADVANTAGES ===
+.advantages {
+  outline: 2px dotted orange;
+  outline-offset: -2px;
+  margin-bottom: 80px;
+  // .advantages__title
+  &__title {
+  }
+  // .advantages__list
+  &__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 20px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  // .advantages__item
+  &__item {
+    outline: 2px dotted yellow;
+    outline-offset: -2px;
+    text-align: center;
+  }
+  // .advantages__item-title
+  &__item-title {
+  }
+  // .advantages__item-text
+  &__item-text {
+    margin: 0 10px;
+  }
+}
+// === / ADVANTAGES ===
+
+// === NEWS ===
+.news {
+  outline: 2px dotted coral;
+  outline-offset: -2px;
+
+  // .news__title
+  &__title {
+  }
+  // .news__list
+  &__list {
+    list-style: none;
+  }
+  // .news__list-item
+  &__list-item {
+  }
+  // .news__text
+  &__text {
+  }
+  // .news__date
+  &__date {
+  }
+  // .news__link
+  &__link {
+  }
+}
+// === / NEWS ===
+
+// === GALLERY ===
+.gallery {
+  outline: 2px dotted gold;
+  outline-offset: -2px;
+  // .gallery__title
+  &__title {
+  }
+  // .gallery__content
+  &__content {
+    background-color: $basic-dark;
+    border: 7px solid $basic-white;
+  }
+  // .gallery__link
+  &__link {
+  }
+  // .gallery__image
+  &__image {
+  }
+  // .gallery__button
+  &__button {
+  }
+  // .gallery__button-previous
+  &__button-previous {
+  }
+  // .gallery__button-next
+  &__button-next {
+  }
+}
+// === / GALLERY ===
+
+// ===  CONTACTS ===
+.contacts {
+  outline: 2px dotted blueviolet;
+  outline-offset: -2px;
+  // .contacts__title
+  &__title {
+  }
+  // .contacts__name
+  &__name {
+  }
+  // .contacts__address
+  &__address {
+    font-style: normal;
+  }
+  // .contacts__phone
+  &__phone {
+    color: inherit;
+  }
+  // .contacts__text
+  &__text {
+  }
+  // .contacts__link
+  &__link {
+  }
+}
+// === / CONTACTS ===
+
+// === SIGN-UP ===
+.sign-up {
+  outline: 2px dotted brown;
+  outline-offset: -2px;
+  // .sign-up__title
+  &__title {
+  }
+  // .sign-up__form-description
+  &__form-description {
+  }
+  // .sign-up__form
+  &__form {
+  }
+  // .sign-up__paragraph
+  &__paragraph {
+  }
+  // .sign-up__label
+  &__label {
+  }
+  // .sign-up__input
+  &__input {
+    font: inherit;
+    background-color: transparent;
+    border: 2px solid $basic-black;
+  }
+  // FIXME:
+  &__input:focus {
+    border-color: $special;
+  }
+  // .sign-up__button
+  &__button {
+  }
+}
+// === / SIGN-UP ===
+
+// === FOOTER ===
+.footer {
+  outline: 2px dotted red;
+  outline-offset: -2px;
+  margin-top: 65px;
+  padding: 60px 0;
+  color: $basic-white;
+  background-color: $basic-extra-dark;
+  @include bg-pattern-dark;
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  // .footer__contacts
+  &__contacts {
+    outline: 2px dotted violet;
+    outline-offset: -2px;
+    margin: 0;
+    width: 320px;
+  }
+  // .footer__contacts-title
+  &__contacts-title {
+  }
+  // .footer__contacts-name
+  &__contacts-name {
+  }
+  // .footer__contacts-address
+  &__contacts-address {
+    font-style: normal;
+  }
+  // .footer__contacts-link, .footer__contacts-phone
+  &__contacts-link,
+  &__contacts-phone {
+    color: $basic-white;
+    text-decoration: underline;
+  }
+  &__contacts-link:hover,
+  &__contacts-link:focus,
+  &__contacts-phone:hover,
+  &__contacts-phone:focus {
+    text-decoration: none;
+  }
+  // .footer__social
+  &__social {
+    outline: 2px dotted cadetblue;
+    outline-offset: -2px;
+    width: 145px;
+    justify-self: center;
+    text-align: center;
+  }
+  // .footer__social-title
+  &__social-title {
+    font-size: 14px;
+  }
+  // .footer__social-list
+  &__social-list {
+    list-style: none;
+  }
+  // .footer__social-item
+  &__social-item {
+  }
+  // .footer__social-link
+  &__social-link {
+    color: inherit;
+  }
+  &__social-link:hover,
+  &__social-link:focus {
+    background-color: $basic-white;
+  }
+  // .footer__social-name
+  &__social-name {
+  }
+  // .footer__social-icon
+  &__social-icon {
+  }
+  // .footer__developed
+  &__developed {
+    outline: 2px dotted burlywood;
+    outline-offset: -2px;
+    margin: 0;
+    max-width: 170px;
+    justify-self: end;
+  }
+  // .footer__developed-link
+  &__developed-link:hover,
+  &__developed-link:focus {
+    color: $basic-black;
+    background-color: $basic-white;
+  }
+}
+// === / FOOTER ===
+
+// -|* Grid for Pages *|-
+.inner-page {
+  color: $basic-black;
+  background-color: $basic-extra-light;
+  @include bg-pattern-light;
+
+  .main-navigation__wrapper {
+    grid-template-columns: 170px 1fr min-content;
+  }
+}
+
+.page-title {
+  margin: 0 0 15px 0;
+  padding: 0;
+  grid-column: 1 / -1;
+}
+
+.page-catalogue {
+  outline: 2px dotted rebeccapurple;
+  outline-offset: -2px;
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  column-gap: 60px;
+  align-content: start;
+
+  .page-title {
+    outline: 2px dotted orchid;
+    outline-offset: -2px;
+  }
+
+  .breadcrumbs {
+    outline: 2px dotted goldenrod;
+    outline-offset: -2px;
+  }
+
+  .goods-filter {
+    outline: 2px dotted yellowgreen;
+    outline-offset: -2px;
+  }
+
+  .goods-list {
+    outline: 2px dotted cyan;
+    outline-offset: -2px;
+  }
+
+  .pagination {
+    outline: 2px dotted royalblue;
+    outline-offset: -2px;
+  }
+}
+// === GOODS LIST ===
+.goods-list {
+  // .goods-list__article
+  &__article {
+    background-color: $basic-extra-light;
+    box-shadow: $shadow-article;
+  }
+  // .goods-list__link
+  &__link {
+  }
+  // .goods-list__article-title
+  &__article-title {
+    font-size: 14px;
+    line-height: 18px;
+    color: $basic-black;
+  }
+}
+// === / GOODS LIST ===

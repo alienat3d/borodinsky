@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html class="page" lang="ru">
+
+<head>
+  <!-- -| Meta |- -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- -| Title |- -->
+  <title>Барбершоп «Бородинский»</title>
+  <!-- -| Favicons |- -->
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- -| Fonts |- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <link href="css/main.css" rel="stylesheet">
+</head>
+
+<body class="page-body">
+  <!-- === HEADER === -->
+  @@include('blocks/main-header.html')
+  <!-- === / HEADER === -->
+
+  <main class="container">
+    <h1 class="visually-hidden">Барбершоп «Бородинский»</h1>
+    <!-- === ADVANTAGES === -->
+    <section class="advantages">
+      <h2 class="visually-hidden  advantages__title">Преимущества</h2>
+      <ul class="advantages__list">
+        <li class="advantages__item">
+          <h3 class="title  advantages__item-title">Быстро</h3>
+          <p class="advantages__item-text">
+            Мы делаем свою работу быстро! Два часа пролетят незаметно и вы — счастливый обладатель стильной
+            стрижки-минутки!
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="title  advantages__item-title">Круто</h3>
+          <p class="advantages__item-text">
+            Забудьте, как вы стриглись раньше. Мы сделаем из вас звезду футбола или кино! Во всяком случае внешне.
+          </p>
+        </li>
+        <li class="advantages__item">
+          <h3 class="title  advantages__item-title">Дорого</h3>
+          <p class="advantages__item-text">
+            Наши мастера — профессионалы своего дела и не могут стоить дёшево. К тому же, разве цена не даёт
+            определённый статус?
+          </p>
+        </li>
+      </ul>
+    </section>
+    <!-- === / ADVANTAGES === -->
+
+    <div class="index-columns">
+      <!-- === NEWS === -->
+      <section class="news">
+        <h2 class="title  news__title">Новости</h2>
+        <ul class="news__list">
+          <li class="news__list-item">
+            <p class="news__text">
+              Нам наконец завезли Егермайстер! Теперь вы можете пропустить стаканчик во время стрижки.
+            </p>
+            <time class="news__date" datetime="2023-02-22">22 февраля</time>
+          </li>
+          <li class="news__list-item">
+            <p class="news__text">
+              В нашей команде пополнение, Борис «Бритва» Стригунец, обладатель множества титулов и наград пополнил наши стройные ряды.
+            </p>
+            <time class="news__date" datetime="2023-02-15">15 февраля</time>
+          </li>
+        </ul>
+        <a class="button  news__link">Все новости</a>
+      </section>
+      <!-- === / NEWS === -->
+
+      <!-- === GALLERY === -->
+      <section class="gallery">
+        <h2 class="title  gallery__title">Фотогалерея</h2>
+        <div class="gallery-container">
+          <figure class="gallery__content">
+            <a class="gallery__link" href="#">
+              <img class="gallery__image" src="img/gallery/barbershop-inside-room.jpg" width="286" height="164"
+                alt="Интерьер" />
+            </a>
+          </figure>
+          <button class="button  gallery__button  gallery__button-previous" type="button" disabled>Назад</button>
+          <button class="button  gallery__button  gallery__button-next" type="button">Вперёд</button>
+        </div>
+      </section>
+      <!-- === / GALLERY === -->
+    </div> <!-- /.index-columns -->
+
+    <div class="index-columns">
+      <!-- === CONTACTS === -->
+      <section class="contacts">
+        <h2 class="title  contacts__title">Контактная информация</h2>
+        <p class="contacts__name">Барбершоп «Бородинский»</p>
+        <address class="contacts__address">Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</address>
+        <a class="contacts__phone" href="tel:+78126660266">Телефон: +7 (812) 666-02-66</a>
+        <p class="contacts__text">
+          Время работы:
+          пн—пт: с 10:00 до 22:00 сб—вс: с 10:00 до 19:00
+        </p>
+        <a class="button  contacts__link" href="blank.html">Как проехать</a>
+        <a class="button  contacts__link" href="blank.html">Обратная связь</a>
+      </section>
+      <!-- === / CONTACTS === -->
+
+      <!-- === SIGN-UP === -->
+      <section class="sign-up">
+        <h2 class="title  sign-up__title">Записаться</h2>
+        <p class="sign-up__form-description">Укажите желаемую дату и время и мы свяжемся с вами для подтверждения брони
+        </p>
+        <form class="sign-up__form" action="https://echo.borodinsky-barbershop.ru" method="post">
+          <p class="sign-up__paragraph">
+            <label class="sign-up__label" for="appointment-date">Дата
+              <input id="appointment-date" class="sign-up__input" type="text" name="date" placeholder="22.02.2023">
+            </label>
+          </p>
+          <p class="sign-up__paragraph">
+            <label class="sign-up__label" for="appointment-time">Время
+              <input id="appointment-time" class="sign-up__input" type="text" name="time" placeholder="15:30">
+            </label>
+          </p>
+          <p class="sign-up__paragraph">
+            <label class="sign-up__label" for="appointment-name">Ваше имя
+              <input id="appointment-name" class="sign-up__input" type="text" name="name"
+                placeholder="Иван Иванович Примеров">
+            </label>
+          </p>
+          <p class="sign-up__paragraph">
+            <label class="sign-up__label" for="appointment-phone">Телефон
+              <input id="appointment-phone" class="sign-up__input" type="text" name="phone" placeholder="+7 812 111 22 33">
+            </label>
+          </p>
+          <button class="button  sign-up__button" type="submit">Отправить</button>
+        </form>
+      </section>
+      <!-- === / SIGN-UP === -->
+    </div> <!-- /.index-columns -->
+
+  </main>
+  <!-- === FOOTER === -->
+  @@include('blocks/footer.html')
+  <!-- === / FOOTER === -->
+
+  <!-- === LOG-IN POP-UP === -->
+  <!-- @@include('blocks/modal-log-in.html') -->
+  <!-- === / LOG-IN POP-UP === -->
+
+  <!-- === MAP POP-UP === -->
+  <!-- @@include('blocks/modal-map.html') -->
+  <!-- === / MAP POP-UP === -->
+</body>
+
+</html>

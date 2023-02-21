@@ -1,0 +1,11 @@
+@mixin bg-pattern-dark {
+  background-image: url("../img/bg-noise-pattern-dark.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+@mixin bg-pattern-light {
+  background-image: url("../img/bg-noise-pattern-light.jpg");
+  background-position: 0 0;
+  background-repeat: repeat;
+}
