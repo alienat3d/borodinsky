@@ -328,6 +328,8 @@
 }
 
 .page-title {
+  outline: 2px dotted red;
+  outline-offset: -2px;
   margin: 0 0 15px 0;
   padding: 0;
   grid-column: 1 / -1;
@@ -384,3 +386,113 @@
   }
 }
 // === / GOODS LIST ===
+
+// === PAGE-PRODUCT ===
+.page-product {
+  outline: 2px dotted palevioletred;
+  outline-offset: -2px;
+  display: grid;
+  grid-template-columns: 460px 1fr;
+  align-content: start;
+
+  h2 {
+    order: -1;
+  }
+}
+// === / PAGE-PRODUCT ===
+
+// === PRODUCT-GALLERY ===
+.product-gallery {
+  outline: 2px dotted darkkhaki;
+  outline-offset: -2px;
+  // .product-gallery__full-link
+  &__full-link {
+  }
+  // .product-gallery__full-pic
+  &__full-pic {
+    margin: 0;
+    margin-bottom: 20px;
+    display: block;
+  }
+  // .product-gallery__preview
+  &__preview {
+    list-style: none;
+  }
+  // .product-gallery__preview-item
+  &__preview-item {
+    box-shadow: $shadow-pic;
+  }
+  &__preview-item:hover {
+    box-shadow: $shadow-pic-hover;
+  }
+  // .product-gallery__preview-pic
+  &__preview-pic {
+  }
+}
+// === / PRODUCT-GALLERY ===
+// === PRODUCT-INFO ===
+.product-info {
+  outline: 2px dotted darkslategrey;
+  outline-offset: -2px;
+  width: 390px;
+  padding-top: 23px;
+  padding-left: 80px;
+
+  p {
+    margin: 0;
+  }
+
+  // .product-info__description
+  &__description {
+    padding-right: 10px;
+    margin-bottom: 29px;
+  }
+  &__availability,
+  &__article-id {
+    width: 200px;
+  }
+  // .product-info__availability
+  &__availability {
+  }
+  // .product-info__article-id
+  &__article-id {
+    text-align: right;
+    color: $basic-dark;
+  }
+  // .product-info__description
+  &__text {
+    margin-bottom: 35px;
+  }
+  // .product-info__price
+  &__price {
+    margin-bottom: 63px;
+  }
+  // .product-info__price b
+  &__price b {
+    width: 112px;
+    text-align: center;
+    line-height: 20px;
+    background-color: $basic-neutral;
+  }
+  // .product-info__buy-button
+  &__buy-button {
+    padding-right: 17px;
+    padding-left: 17px;
+  }
+  // .product-info__compound-title
+  &__compound-title {
+    margin: 0;
+    margin-bottom: 27px;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  // .product-info__compound-list
+  &__compound-list {
+    list-style: none;
+  }
+  // .product-info__compound-list-item
+  &__compound-list-item {
+    position: relative;
+  }
+}
+// === / PRODUCT-INFO ===
