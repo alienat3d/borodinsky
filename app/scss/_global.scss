@@ -12,16 +12,16 @@ img {
 }
 
 .page-body {
-  min-height: 100%;
-  display: grid;
-  grid-template-rows: min-content 1fr min-content;
-  align-content: start;
+  // min-height: 100%;
+  // display: grid;
+  // grid-template-rows: min-content 1fr min-content;
+  // align-content: start;
 
   min-width: 960px;
   margin: 0;
   padding: 0;
   font-family: "PT Sans Narrow", Arial, sans-serif;
-  font-size: 14px;
+  font-size: $font-xs;
   line-height: 24px;
   font-weight: 700;
   color: $basic-white;
@@ -39,17 +39,19 @@ img {
 }
 // -|* Title *|-
 .title {
-  font-size: 30px;
+  font-size: $font-lg;
   line-height: 42px;
 }
 
 // === INDEX-COLUMNS ===
 .index-columns {
+  // display: grid;
+  // grid-template-columns: 1fr 1fr;
   outline: 2px dotted greenyellow;
   outline-offset: -2px;
+  display: flex;
+  justify-content: space-between;
   margin-bottom: 35px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
   color: $basic-black;
   @include bg-pattern-light;
 }
@@ -57,6 +59,8 @@ img {
 
 // === BUTTON ===
 .button {
+  display: inline-block;
+  margin-right: 16px;
   border: none;
   background-color: $basic-black;
   vertical-align: middle;
@@ -81,6 +85,8 @@ img {
 
 // === BREADCRUMBS ===
 .breadcrumbs {
+  outline: 2px dotted goldenrod;
+  outline-offset: -2px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -102,49 +108,65 @@ img {
 }
 // === / BREADCRUMBS ===
 
+// === PAGINATION ===
+.pagination {
+  outline: 2px dotted royalblue;
+  outline-offset: -2px;
+}
+// === / PAGINATION ===
+
 // === MODAL ===
 .modal {
   color: $basic-black;
-  background-color: $basic-extra-light;
   @include bg-pattern-light;
   box-shadow: $shadow-modal;
 }
+
 // =| LOG-IN |=
-.log-in-pop-up {
-  // .log-in-pop-up__input
-  &__input[type="email"],
-  &__input[type="password"] {
-    border: 2px solid $basic-black;
-    background-color: $basic-extra-light;
-    font: inherit;
-    color: $basic-black;
-    text-transform: uppercase;
-  }
-  &__input:focus {
-    border-color: $special;
-  }
-  // .log-in-pop-up__icon-user, .log-in-pop-up__icon-password
-  &__icon-user,
-  &__icon-password {
-    background-position: 270px center;
-    background-repeat: no-repeat;
-  }
-  // .log-in-pop-up__icon-user
-  &__icon-user {
-    background-image: url("../img/user.svg");
-  }
-  // .log-in-pop-up__icon-password
-  &__icon-password {
-    background-image: url("../img/lock.svg");
-  }
-  // .log-in-pop-up__link
-  &__link {
-    color: $basic-black;
-    text-decoration: underline;
-  }
-  &__link:hover,
-  &__link:focus {
-    text-decoration: none;
-  }
+.modal-login-title {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.modal-login-description {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.modal-login-paragraph {
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.modal-login-input[type="email"],
+.modal-login-input[type="password"] {
+  font: inherit;
+  color: $basic-black;
+  text-transform: uppercase;
+  background-color: $basic-extra-light;
+  border: 2px solid $basic-black;
+}
+.modal-login-input:focus {
+  border-color: $special;
+}
+.modal-login-icon-user,
+.modal-login-icon-password {
+  background-position: 270px center;
+  background-repeat: no-repeat;
+}
+.modal-login-icon-user {
+  background-image: url("../img/user.svg");
+}
+.modal-login-icon-password {
+  background-image: url("../img/lock.svg");
+}
+.modal-login-help {
+  margin: 15px 0;
+  color: $basic-black;
+  text-decoration: underline;
+}
+.modal-login-help:hover,
+.modal-login-help:focus {
+  text-decoration: none;
 }
 // === / MODAL ===

@@ -1,5 +1,6 @@
 FIXME:
 -> Inputs inside of labels.
+-> Remove BEM.
 
 TODO:
 -> Modal-map pops-up on <address> click.

@@ -106,11 +106,6 @@ function fonts() {
     .pipe(dest(buildFolder + '/fonts'))
 };
 
-function misc() {
-  return src(sourceFolder + '/misc/**/*')
-    .pipe(dest(buildFolder))
-};
-
 function clear() {
   return del(buildFolder)
 };
@@ -121,7 +116,7 @@ function serve() {
     reloadOnRestart: true,
     server: {
       baseDir: buildFolder,
-      directory: true
+      directory: true,
     },
     notify: false,
   });
@@ -133,11 +128,10 @@ function serve() {
   watch(sourceFolder + '/img/**/*', series(svg)).on('change', sync.reload)
   watch(sourceFolder + '/img/icons/**/*', series(sprite)).on('change', sync.reload)
   watch(sourceFolder + '/fonts/**/*', series(fonts)).on('change', sync.reload)
-  watch(sourceFolder + '/misc/**/*', series(misc)).on("change", sync.reload)
 };
 
 
-exports.build = series(clear, scss, js, img, sprite, fonts, misc, html);
-exports.watch = series(clear, scss, js, img, svg, sprite, fonts, misc, html, serve);
+exports.build = series(clear, scss, js, img, sprite, fonts, html);
+exports.watch = series(clear, scss, js, img, svg, sprite, fonts, html, serve);
 exports.bem = bem;
 exports.clear = clear;

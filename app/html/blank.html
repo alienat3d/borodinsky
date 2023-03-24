@@ -1,58 +1,36 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
 
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- -| Meta |- -->
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- -| Title |- -->
   <title>Барбершоп «Бородинский» - Страница-заглушка</title>
+  <!-- -| Favicons |- -->
+  <link rel="icon" href="favicon.ico"><!-- 32×32 -->
+  <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple.png"><!-- 180×180 -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <!-- -| Fonts |- -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+  <!-- -| CSS |- -->
+  <!-- <link href="https://raw.githubusercontent.com/elad2412/the-new-css-reset/main/css/reset.css" rel="stylesheet"> -->
+
+  <link href="css/main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-body  inner-page">
 
   <!-- === HEADER === -->
-  <header class="header">
-    <nav class="navigation">
-      <a class="logo">
-        <img class="logo__image" src="img/index-logo.svg" width="368" height="153"
-          alt="Логотип барбершопа «Бородинский»">
-      </a>
-      <ul class="menu">
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
-            Информация
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
-            Новости
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="price.html">
-            Прайс-лист
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="catalog.html">
-            Магазин
-          </a>
-        </li>
-        <li class="menu__item">
-          <a class="menu__link" href="blank.html">
-            Контакты
-          </a>
-        </li>
-      </ul>
-      <a class="navigation__login" href="blank.html">
-        Вход
-      </a>
-    </nav>
-  </header>
+  @@include('blocks/header-blank.html')
   <!-- === / HEADER === -->
 
   <main class="content">
-    <h1 class="page-title">Пустая</h1>
+    <h1 class="page-title">Пустая «Страница-заглушка»</h1>
     <ul class="breadcrumbs">
       <li>
         <a href="index.html">Главная</a>
@@ -81,97 +59,15 @@
     <!-- === / SIGN-UP === -->
   </main>
   <!-- === FOOTER === -->
-  <footer class="footer">
-    <section class="footer__location">
-      <h2 class="footer__location-title">
-        Как нас найти
-      </h2>
-      <p class="footer__location-name">
-        БАРБЕРШОП «БОРОДИНСКИЙ»
-      </p>
-      <address class="footer__location-address">
-        АДРЕС: Г. САНКТ-ПЕТЕРБУРГ, УЛ. Б. КОНЮШЕННАЯ, Д. 19/8
-      </address>
-      <a class="footer__location-link" href="blank.html">
-        КАК НАС НАЙТИ?
-      </a>
-      <a class="footer__location-phone" href="tel:+78126660266">ТЕЛЕФОН: +7 (812) 666-02-66</a>
-    </section>
-
-    <section class="footer__social">
-      <h2 class="footer__social-title">
-        ДАВАЙТЕ ДРУЖИТЬ!
-      </h2>
-      <ul class="footer__social-list">
-        <li class="footer__social-item">
-          <a class="footer__social-link" href="#">
-            <img class="footer__social-image" src="" alt="">
-          </a>
-        </li>
-      </ul>
-    </section>
-
-    <p class="footer__developed">
-    <p class="footer__developed-text">
-      РАЗРАБОТАНО:
-    </p>
-    <a class="footer__developed-link" href="#">
-      Al Tsaplin
-    </a>
-    </p>
-  </footer>
+  @@include('blocks/footer.html')
   <!-- === / FOOTER === -->
 
   <!-- === LOG-IN POP-UP === -->
-  <section class="log-in-pop-up">
-    <h2 class="log-in-pop-up__title">
-      Личный кабинет
-    </h2>
-    <p class="log-in-pop-up__desc">
-      Введите пожалуйста свой логин и пароль
-    </p>
-    <form class="log-in-pop-up__form" action="https://echo.barbershop.ru" method="POST">
-      <p>
-        <label for="login-login">
-          Логин
-        </label>
-        <input id="login-login" class="log-in-pop-up__input" type="email" name="login" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="login-password">
-          Пароль
-        </label>
-        <input id="login-password" class="log-in-pop-up__input" type="password" name="password" placeholder="••••••••">
-      </p>
-      <p>
-        <label>
-          <input class="log-in-pop-up__checkbox" type="checkbox" name="remember">
-          ЗАПОМНИТЕ МЕНЯ
-        </label>
-        <a class="log-in-pop-up__link" href="blank.html">
-          Я ЗАБЫЛ ПАРОЛЬ!
-        </a>
-      </p>
-      <button class="log-in-pop-up__login-btn" type="submit">
-        ВОЙТИ
-      </button>
-    </form>
-    <button class="log-in-pop-up__close-btn" type="button">
-      Закрыть
-    </button>
-  </section>
+  <!-- @@include('blocks/modal-log-in.html') -->
   <!-- === / LOG-IN POP-UP === -->
 
   <!-- === MAP POP-UP === -->
-  <section class="map-pop-up">
-    <h2 class="map-pop-up__title">
-      Как до нас добраться
-    </h2>
-    <!-- Здесь будет карта -->
-    <button class="map-pop-up__close-btn">
-      Закрыть
-    </button>
-  </section>
+  <!-- @@include('blocks/modal-map.html') -->
   <!-- === / MAP POP-UP === -->
 
 </body>
