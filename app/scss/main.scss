@@ -7,9 +7,9 @@
 
 // === HEADER ===
 .main-header {
+  // outline: 2px dotted green;
+  // outline-offset: -2px;
   margin-bottom: 70px;
-  outline: 2px dotted green;
-  outline-offset: -2px;
 }
 
 .main-navigation {
@@ -28,12 +28,12 @@
 }
 
 .main-header-logo {
+  // outline: 2px dotted palevioletred;
+  // outline-offset: -2px;
   width: 368px;
   height: 153px;
   order: 2;
   justify-self: center;
-  outline: 2px dotted palevioletred;
-  outline-offset: -2px;
 }
 
 .main-navigation-wrapper {
@@ -45,10 +45,13 @@
 .site-navigation {
   outline: 2px dotted aquamarine;
   outline-offset: -2px;
-  list-style: none;
+
+  display: flex;
+  flex-wrap: wrap;
+  width: 620px;
   margin: 0;
   padding: 0;
-  width: 620px;
+  list-style: none;
   min-height: 70px;
 }
 
@@ -60,6 +63,9 @@
 .site-navigation-link,
 .user-navigation-login-link {
   color: $basic-white;
+  display: block;
+  padding: 25px 20px;
+  transition: background-color 0.2s;
 }
 
 .site-navigation-link:hover,
@@ -73,28 +79,47 @@
   outline: 2px dotted orangered;
   outline-offset: -2px;
   max-width: 140px;
-  // margin-left: auto;
 }
 
 .user-navigation-login-link {
   padding-left: 50px;
+  position: relative;
+}
+.user-navigation-login-link::before {
+  content: "";
+  position: absolute;
+  top: 29px;
+  left: 24px;
+  width: 16px;
+  height: 18px;
+  background-image: url("../img/login.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  opacity: 0.3;
+  transition: opacity 0.2s;
+}
+
+.user-navigation-login-link:hover::before,
+.user-navigation-login-link:focus::before,
+.user-navigation-login-link:active::before {
+  opacity: 1;
 }
 // === / HEADER ===
 
 // === FEATURES ===
 .features {
-  outline: 2px dotted orange;
-  outline-offset: -2px;
+  // outline: 2px dotted orange;
+  // outline-offset: -2px;
   margin-bottom: 80px;
 }
 
 // As alternative Flexbox realization commented. Although grid is a more elegant solution.
 .features-list {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 20px;
   // display: flex;
   // flex-wrap: wrap;
+  // gap: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
   margin: 0;
   padding: 0;
   list-style: none;
@@ -103,10 +128,28 @@
 .features-item {
   outline: 2px dotted yellow;
   outline-offset: -2px;
-  width: 300px;
-  text-align: center;
   // margin-right: 20px;
   // margin-bottom: 20px;
+
+  width: 300px;
+  text-align: center;
+}
+
+.features-item-title {
+  position: relative;
+  margin: 0;
+  margin-bottom: 60px;
+}
+.features-item-title::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: -10px;
+  background-color: $basic-white;
+  transform: rotate(45deg);
 }
 
 // .features-item:nth-child(3n) {
@@ -120,22 +163,16 @@
 
 // === NEWS ===
 .news {
-  outline: 2px dotted coral;
-  outline-offset: -2px;
+  // outline: 2px dotted coral;
+  // outline-offset: -2px;
   width: 380px;
 }
 
-.news-title,
-.gallery-title,
-.contacts-title,
-.appointment-title {
-  margin: 0;
-  margin-bottom: 25px;
-}
-
 .news-list {
-  list-style: none;
+  margin: 0;
   margin-bottom: 30px;
+  padding: 0;
+  list-style: none;
 }
 
 .news-list-item {
@@ -145,16 +182,24 @@
 .news-text {
   margin: 0;
 }
+
+.news-date {
+  text-transform: none;
+}
 // === / NEWS ===
 
 // === GALLERY ===
 .gallery {
+  // outline: 2px dotted gold;
+  // outline-offset: -2px;
   width: 300px;
-  outline: 2px dotted gold;
-  outline-offset: -2px;
 }
 
 .gallery-container {
+  outline: 2px dotted peru;
+  outline-offset: -2px;
+
+  position: relative;
   height: 260px;
 }
 
@@ -169,12 +214,24 @@
   width: 286px;
   height: 164px;
 }
+
+.gallery-button {
+  position: absolute;
+  bottom: 0;
+  box-sizing: border-box;
+  width: 140px;
+  margin: 0;
+}
+
+.gallery-button-back{left: 0;}
+
+.gallery-button-next{right: 0;}
 // === / GALLERY ===
 
 // ===  CONTACTS ===
 .contacts {
-  outline: 2px dotted blueviolet;
-  outline-offset: -2px;
+  // outline: 2px dotted blueviolet;
+  // outline-offset: -2px;
   width: 380px;
 }
 
@@ -207,8 +264,8 @@
 
 // === APPOINTMENT ===
 .appointment {
-  outline: 2px dotted brown;
-  outline-offset: -2px;
+  // outline: 2px dotted brown;
+  // outline-offset: -2px;
   width: 300px;
 }
 
@@ -217,7 +274,17 @@
   margin-bottom: 15px;
 }
 
+.appointment-form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .appointment-item {
+  outline: 2px dotted cornflowerblue;
+  outline-offset: -2px;
+
+  width: 140px;
   margin-top: 0;
   margin-bottom: 10px;
 }
@@ -227,6 +294,10 @@
   font: inherit;
   background-color: transparent;
   border: 2px solid $basic-black;
+  box-sizing: border-box;
+}
+.appointment-input::placeholder{
+  text-overflow: ellipsis;
 }
 
 .appointment-input:focus,
@@ -243,8 +314,8 @@
 
 // === FOOTER ===
 .footer {
-  outline: 2px dotted red;
-  outline-offset: -2px;
+  // outline: 2px dotted red;
+  // outline-offset: -2px;
   margin-top: 65px;
   padding: 60px 0;
   color: $basic-white;
@@ -257,16 +328,10 @@
 
   // .footer__contacts
   &__contacts {
-    outline: 2px dotted violet;
-    outline-offset: -2px;
+    // outline: 2px dotted violet;
+    // outline-offset: -2px;
     margin: 0;
     width: 320px;
-  }
-  // .footer__contacts-title
-  &__contacts-title {
-  }
-  // .footer__contacts-name
-  &__contacts-name {
   }
   // .footer__contacts-address
   &__contacts-address {
@@ -286,8 +351,8 @@
   }
   // .footer__social
   &__social {
-    outline: 2px dotted cadetblue;
-    outline-offset: -2px;
+    // outline: 2px dotted cadetblue;
+    // outline-offset: -2px;
     width: 145px;
     justify-self: center;
     text-align: center;
@@ -303,9 +368,6 @@
     padding: 0;
     list-style: none;
   }
-  // .footer__social-item
-  &__social-item {
-  }
   // .footer__social-link (.social-button)
   &__social-link {
     color: inherit;
@@ -314,16 +376,10 @@
   &__social-link:focus {
     background-color: $basic-white;
   }
-  // .footer__social-name
-  &__social-name {
-  }
-  // .footer__social-icon
-  &__social-icon {
-  }
   // .footer__developed (.footer-copyright)
   &__developed {
-    outline: 2px dotted burlywood;
-    outline-offset: -2px;
+    // outline: 2px dotted burlywood;
+    // outline-offset: -2px;
     margin: 0;
     max-width: 150px;
     justify-self: end;
@@ -341,7 +397,6 @@
 // -|* Inner Page (additional pages edits) *|-
 .inner-page {
   color: $basic-black;
-  background-color: $basic-extra-light;
   @include bg-pattern-light;
 
   .main-header {
@@ -358,18 +413,22 @@
     align-items: flex-start;
     width: 100%;
   }
+
+  .user-navigation {
+    margin-left: auto;
+  }
 }
 
 .page-title {
-  outline: 2px dotted orchid;
-  outline-offset: -2px;
+  // outline: 2px dotted orchid;
+  // outline-offset: -2px;
   margin: 0 0 15px 0;
   padding: 0;
 }
 
 .page-catalogue {
-  outline: 2px dotted rebeccapurple;
-  outline-offset: -2px;
+  // outline: 2px dotted rebeccapurple;
+  // outline-offset: -2px;
   display: grid;
   grid-template-columns: 180px 1fr;
   column-gap: 60px;
@@ -382,9 +441,9 @@
 
 // === FILTERS ===
 .filters {
+  // outline: 2px dotted yellowgreen;
+  // outline-offset: -2px;
   width: 180px;
-  outline: 2px dotted yellowgreen;
-  outline-offset: -2px;
 }
 
 .filter fieldset {
@@ -424,8 +483,8 @@
 
 // === CATALOGUE ===
 .catalogue {
-  outline: 2px dotted cyan;
-  outline-offset: -2px;
+  // outline: 2px dotted cyan;
+  // outline-offset: -2px;
   margin-bottom: 25px;
 }
 
@@ -490,8 +549,8 @@
 
 // === PAGE-PRODUCT ===
 .page-product {
-  outline: 2px dotted palevioletred;
-  outline-offset: -2px;
+  // outline: 2px dotted palevioletred;
+  // outline-offset: -2px;
   display: grid;
   grid-template-columns: 460px 1fr;
   align-content: start;
@@ -504,11 +563,8 @@
 
 // === PRODUCT-GALLERY ===
 .product-gallery {
-  outline: 2px dotted darkkhaki;
-  outline-offset: -2px;
-  // .product-gallery__full-link
-  &__full-link {
-  }
+  // outline: 2px dotted darkkhaki;
+  // outline-offset: -2px;
   // .product-gallery__full-pic
   &__full-pic {
     margin: 0;
@@ -526,15 +582,12 @@
   &__preview-item:hover {
     box-shadow: $shadow-pic-hover;
   }
-  // .product-gallery__preview-pic
-  &__preview-pic {
-  }
 }
 // === / PRODUCT-GALLERY ===
 // === PRODUCT-INFO ===
 .product-info {
-  outline: 2px dotted darkslategrey;
-  outline-offset: -2px;
+  // outline: 2px dotted darkslategrey;
+  // outline-offset: -2px;
   width: 390px;
   padding-top: 23px;
   padding-left: 80px;
@@ -551,9 +604,6 @@
   &__availability,
   &__article-id {
     width: 200px;
-  }
-  // .product-info__availability
-  &__availability {
   }
   // .product-info__article-id
   &__article-id {

@@ -8,6 +8,6 @@
 @mixin bg-pattern-light {
   background-color: $basic-extra-light;
   background-image: url("../img/bg-noise-pattern-light.jpg");
-  background-position: center, 0 0;
+  background-position: 0 0;
   background-repeat: repeat;
 }

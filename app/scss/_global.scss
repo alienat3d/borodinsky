@@ -12,10 +12,10 @@ img {
 }
 
 .page-body {
-  // min-height: 100%;
-  // display: grid;
-  // grid-template-rows: min-content 1fr min-content;
-  // align-content: start;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 
   min-width: 960px;
   margin: 0;
@@ -42,18 +42,45 @@ img {
   font-size: $font-lg;
   line-height: 42px;
 }
+// -|* Visually Hidden *|-
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 
 // === INDEX-COLUMNS ===
 .index-columns {
   // display: grid;
   // grid-template-columns: 1fr 1fr;
-  outline: 2px dotted greenyellow;
-  outline-offset: -2px;
+  // outline: 2px dotted greenyellow;
+  // outline-offset: -2px;
   display: flex;
   justify-content: space-between;
+  padding: 50px 80px;
   margin-bottom: 35px;
   color: $basic-black;
-  @include bg-pattern-light;
+  background-color: $basic-extra-light;
+  background-image:
+    url("../img/line.png"),
+    url("../img/bg-noise-pattern-light.jpg");
+  background-position: center, 0 0;
+  background-repeat: no-repeat, repeat;
+}
+// The titles inside of .index-columns blocks.
+.news-title,
+.gallery-title,
+.contacts-title,
+.appointment-title {
+  margin: 0;
+  margin-bottom: 25px;
 }
 // === / INDEX-COLUMNS ===
 
@@ -61,13 +88,14 @@ img {
 .button {
   display: inline-block;
   margin-right: 16px;
-  border: none;
-  background-color: $basic-black;
-  vertical-align: middle;
+  padding: 10px 30px;
   font: inherit;
-  text-transform: uppercase;
   text-align: center;
   color: $basic-white;
+  vertical-align: middle;
+  text-transform: uppercase;
+  background-color: $basic-black;
+  border: none;
   cursor: pointer;
 }
 .button:hover,
@@ -85,8 +113,8 @@ img {
 
 // === BREADCRUMBS ===
 .breadcrumbs {
-  outline: 2px dotted goldenrod;
-  outline-offset: -2px;
+  // outline: 2px dotted goldenrod;
+  // outline-offset: -2px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -110,8 +138,8 @@ img {
 
 // === PAGINATION ===
 .pagination {
-  outline: 2px dotted royalblue;
-  outline-offset: -2px;
+  // outline: 2px dotted royalblue;
+  // outline-offset: -2px;
 }
 // === / PAGINATION ===
 
