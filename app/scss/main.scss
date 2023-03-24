@@ -43,8 +43,8 @@
 }
 
 .site-navigation {
-  outline: 2px dotted aquamarine;
-  outline-offset: -2px;
+  // outline: 2px dotted aquamarine;
+  // outline-offset: -2px;
 
   display: flex;
   flex-wrap: wrap;
@@ -76,8 +76,8 @@
 }
 
 .user-navigation {
-  outline: 2px dotted orangered;
-  outline-offset: -2px;
+  // outline: 2px dotted orangered;
+  // outline-offset: -2px;
   max-width: 140px;
 }
 
@@ -126,8 +126,8 @@
 }
 
 .features-item {
-  outline: 2px dotted yellow;
-  outline-offset: -2px;
+  // outline: 2px dotted yellow;
+  // outline-offset: -2px;
   // margin-right: 20px;
   // margin-bottom: 20px;
 
@@ -196,8 +196,8 @@
 }
 
 .gallery-container {
-  outline: 2px dotted peru;
-  outline-offset: -2px;
+  // outline: 2px dotted peru;
+  // outline-offset: -2px;
 
   position: relative;
   height: 260px;
@@ -223,9 +223,13 @@
   margin: 0;
 }
 
-.gallery-button-back{left: 0;}
+.gallery-button-back {
+  left: 0;
+}
 
-.gallery-button-next{right: 0;}
+.gallery-button-next {
+  right: 0;
+}
 // === / GALLERY ===
 
 // ===  CONTACTS ===
@@ -281,22 +285,32 @@
 }
 
 .appointment-item {
-  outline: 2px dotted cornflowerblue;
-  outline-offset: -2px;
+  // outline: 2px dotted cornflowerblue;
+  // outline-offset: -2px;
 
   width: 140px;
   margin-top: 0;
   margin-bottom: 10px;
 }
 
+.appointment-label {
+  display: block;
+  margin-bottom: 9px;
+  margin-left: 15px;
+}
+
 .appointment-input {
   width: 140px;
+  padding-top: 8px;
+  padding-right: 15px;
+  padding-bottom: 7px;
+  padding-left: 15px;
   font: inherit;
   background-color: transparent;
   border: 2px solid $basic-black;
   box-sizing: border-box;
 }
-.appointment-input::placeholder{
+.appointment-input::placeholder {
   text-overflow: ellipsis;
 }
 
@@ -307,6 +321,8 @@
 }
 
 .appointment .button {
+  display: block;
+  width: 100%;
   margin-top: 10px;
   margin-right: 0;
 }
@@ -316,82 +332,118 @@
 .footer {
   // outline: 2px dotted red;
   // outline-offset: -2px;
-  margin-top: 65px;
   padding: 60px 0;
+  margin-top: 65px;
   color: $basic-white;
   @include bg-pattern-dark;
+}
 
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-  }
+.footer .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
 
-  // .footer__contacts
-  &__contacts {
-    // outline: 2px dotted violet;
-    // outline-offset: -2px;
-    margin: 0;
-    width: 320px;
-  }
-  // .footer__contacts-address
-  &__contacts-address {
-    font-style: normal;
-  }
-  // .footer__contacts-link, .footer__contacts-phone
-  &__contacts-link,
-  &__contacts-phone {
-    color: $basic-white;
-    text-decoration: underline;
-  }
-  &__contacts-link:hover,
-  &__contacts-link:focus,
-  &__contacts-phone:hover,
-  &__contacts-phone:focus {
-    text-decoration: none;
-  }
-  // .footer__social
-  &__social {
-    // outline: 2px dotted cadetblue;
-    // outline-offset: -2px;
-    width: 145px;
-    justify-self: center;
-    text-align: center;
-  }
-  // .footer__social-title
-  &__social-title {
-    font-size: $font-xs;
-  }
-  // .footer__social-list
-  &__social-list {
-    width: 141px;
-    margin: 0 auto;
-    padding: 0;
-    list-style: none;
-  }
-  // .footer__social-link (.social-button)
-  &__social-link {
-    color: inherit;
-  }
-  &__social-link:hover,
-  &__social-link:focus {
-    background-color: $basic-white;
-  }
-  // .footer__developed (.footer-copyright)
-  &__developed {
-    // outline: 2px dotted burlywood;
-    // outline-offset: -2px;
-    margin: 0;
-    max-width: 150px;
-    justify-self: end;
-    // text-align: center;
-  }
-  // .footer__developed-link
-  &__developed-link:hover,
-  &__developed-link:focus {
-    color: $basic-black;
-    background-color: $basic-white;
+.footer-contacts {
+  // outline: 2px dotted violet;
+  // outline-offset: -2px;
+  margin: 0;
+  width: 320px;
+}
+
+.footer-contacts-address {
+  font-style: normal;
+}
+
+.footer-contacts-link,
+.footer-contacts-phone {
+  color: $basic-white;
+  text-decoration: underline;
+}
+.footer-contacts-link:hover,
+.footer-contacts-link:focus,
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus {
+  text-decoration: none;
+}
+
+.footer-social {
+  // outline: 2px dotted cadetblue;
+  // outline-offset: -2px;
+  width: 145px;
+  justify-self: center;
+  text-align: center;
+}
+
+.footer-social-title {
+  margin-top: 0;
+  margin-bottom: 15px;
+  font-size: $font-xs;
+  display: block;
+}
+
+.footer-social-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 141px;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-social-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 43px;
+  height: 43px;
+  background-color: $basic-black;
+  color: inherit;
+  transition: background-color .3s;
+}
+
+.footer-social-icon {
+  path {
+    transition: fill .3s;
   }
 }
+
+.footer-social-button:hover,
+.footer-social-button:focus {
+  background-color: $basic-white;
+
+  .footer-social-icon {
+    path {
+      fill: $basic-black;
+    }
+  }
+}
+
+.footer-copyright {
+  // outline: 2px dotted burlywood;
+  // outline-offset: -2px;
+  max-width: 150px;
+  margin: 0;
+  justify-self: end;
+  text-align: center;
+}
+
+.footer-copyright-title {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.footer-copyright-button {
+  margin-right: 0;
+  transition: all .3s;
+}
+
+.footer-copyright-button:hover,
+.footer-copyright-button:focus {
+  color: $basic-black;
+  background-color: $basic-white;
+}
+
 // === / FOOTER ===
 
 // -|* Inner Page (additional pages edits) *|-
@@ -422,7 +474,8 @@
 .page-title {
   // outline: 2px dotted orchid;
   // outline-offset: -2px;
-  margin: 0 0 15px 0;
+  margin: 0;
+  margin-bottom: 15px;
   padding: 0;
 }
 

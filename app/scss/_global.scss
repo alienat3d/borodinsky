@@ -145,6 +145,7 @@ img {
 
 // === MODAL ===
 .modal {
+  display: none;
   color: $basic-black;
   @include bg-pattern-light;
   box-shadow: $shadow-modal;
