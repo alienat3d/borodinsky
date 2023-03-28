@@ -682,20 +682,39 @@
 // === / PAGE-PRODUCT ===
 // === PRODUCT-GALLERY ===
 .product-gallery-full-pic {
+  display: block;
+  width: 460px;
+  height: 498px;
   margin: 0;
   margin-bottom: 20px;
-  display: block;
+  box-shadow: $shadow;
+
+  &:hover {
+    box-shadow: $shadow-pic-hover;
+  }
 }
 
 .product-gallery-preview {
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
 }
 
 .product-gallery-preview-item {
+  width: 140px;
+  height: 149px;
+  margin-right: 20px;
+  margin-bottom: 20px;
   box-shadow: $shadow-pic;
 
   &:hover {
     box-shadow: $shadow-pic-hover;
+  }
+
+  &:nth-child(3n) {
+    margin-right: 0;
   }
 }
 // === / PRODUCT-GALLERY ===
@@ -706,60 +725,75 @@
   width: 390px;
   padding-top: 23px;
   padding-left: 80px;
+}
 
-  p {
-    margin: 0;
-  }
-
-  // .product-info__description
-  &__description {
+  .product-description {
+    display: flex;
+    justify-content: space-between;
     padding-right: 10px;
     margin-bottom: 29px;
   }
-  &__availability,
-  &__article-id {
+
+  .product-availability,
+  .product-article-id {
+    margin: 0;
     width: 200px;
   }
-  // .product-info__article-id
-  &__article-id {
+
+  .product-article-id {
     text-align: right;
     color: $basic-dark;
   }
-  // .product-info__description
-  &__text {
+
+  .product-text {
     margin-bottom: 35px;
   }
-  // .product-info__price
-  &__price {
-    margin-bottom: 63px;
+
+  .product-price {
     display: flex;
+    margin-bottom: 63px;
   }
-  // .product-info__price b
-  &__price b {
+
+  .product-price b {
     width: 112px;
     text-align: center;
     line-height: 20px;
     background-color: $basic-neutral;
+    padding: 13px 36px 11px 36px;
+    box-sizing: border-box;
   }
-  // .product-info__buy-button
-  &__buy-button {
+
+  .product-buy-button {
     padding-right: 17px;
     padding-left: 17px;
   }
-  // .product-info__compound-title
-  &__compound-title {
+
+  .product-compound-title {
     margin: 0;
     margin-bottom: 27px;
-    font-size: $font-sm;
+    font-size: $font-md;
     line-height: 30px;
   }
-  // .product-info__compound-list
-  &__compound-list {
+
+  .product-compound-list {
     list-style: none;
+    margin: 0;
+    padding: 0;
   }
-  // .product-info__compound-list-item
-  &__compound-list-item {
+
+  .product-compound-list-item {
     position: relative;
+    padding-left: 23px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 7px;
+      left: 2px;
+      width: 8px;
+      height: 8px;
+      background-color: $basic-black;
+      transform: rotate(45deg);
+    }
   }
-}
 // === / PRODUCT-INFO ===
