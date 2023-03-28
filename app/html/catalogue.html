@@ -33,13 +33,13 @@
     <h1 class="title  page-title">Средства для ухода</h1>
     <!-- === BREADCRUMBS === -->
     <ul class="breadcrumbs">
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="index.html">Главная</a>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="index.html">Главная</a>
       </li>
-      <li class="breadcrumbs__item">
-        <a class="breadcrumbs__link" href="catalogue.html">Магазин</a>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="catalogue.html">Магазин</a>
       </li>
-      <li class="breadcrumbs__item  breadcrumbs__item--current">Средства для ухода</li>
+      <li class="breadcrumbs-item  breadcrumbs-item--current">Средства для ухода</li>
     </ul>
     <!-- === / BREADCRUMBS === -->
 
@@ -109,12 +109,12 @@
 
     <!-- === CATALOGUE === -->
     <section class="catalogue">
-      <h2>Список средств для ухода</h2>
+      <h2 class="visually-hidden  catalogue-title">Список средств для ухода</h2>
       <div class="catalogue-list">
         <!-- Item #01 -->
         <article class="catalogue-item">
           <a class="catalogue-item-link" href="product.html">
-            <h3 class="catalogue-item-title">
+            <h3 class="catalogue-item-name">
               <span class="catalogue-category">Набор для путешествий</span>
               <span class="catalogue-item-title">«Baxter of California»</span>
             </h3>
@@ -131,7 +131,7 @@
         <!-- Item #02 -->
         <article class="catalogue-item">
           <a class="catalogue-item-link" href="product.html">
-            <h3 class="catalogue-item-title">
+            <h3 class="catalogue-item-name">
               <span class="catalogue-category">Увлажняющий кондиционер</span>
               <span class="catalogue-item-title">«Baxter of California»</span>
             </h3>
@@ -148,7 +148,7 @@
         <!-- Item #03 -->
         <article class="catalogue-item">
           <a class="catalogue-item-link" href="product.html">
-            <h3 class="catalogue-item-title">
+            <h3 class="catalogue-item-name">
               <span class="catalogue-category">Гель для волос</span>
               <span class="catalogue-item-title">«SUAVECITO»</span>
             </h3>
@@ -165,7 +165,7 @@
         <!-- Item #04 -->
         <article class="catalogue-item">
           <a class="catalogue-item-link" href="product.html">
-            <h3 class="catalogue-item-title">
+            <h3 class="catalogue-item-name">
               <span class="catalogue-category">Глина для укладки волос</span>
               <span class="catalogue-item-title">«American crew»</span>
             </h3>
@@ -182,7 +182,7 @@
         <!-- Item #05 -->
         <article class="catalogue-item">
           <a class="catalogue-item-link" href="product.html">
-            <h3 class="catalogue-item-title">
+            <h3 class="catalogue-item-name">
               <span class="catalogue-category">Гель для волос</span>
               <span class="catalogue-item-title">«AMERICAN CREW»</span>
             </h3>
@@ -199,7 +199,7 @@
         <!-- Item #06 -->
         <article class="catalogue-item">
           <a class="catalogue-item-link" href="product.html">
-            <h3 class="catalogue-item-title">
+            <h3 class="catalogue-item-name">
               <span class="catalogue-category">Набор для бритья</span>
               <span class="catalogue-item-title">«Baxter of California»</span>
             </h3>
@@ -216,20 +216,22 @@
       </div> <!-- /.catalogue-list -->
       <!-- === / CATALOGUE === -->
       <!-- == PAGINATION == -->
-      <ul class="pagination">
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">1</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link">2</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">3</a>
-        </li>
-        <li class="pagination__item">
-          <a class="pagination__link" href="#">4</a>
-        </li>
-      </ul>
+      <div class="pagination">
+        <ul class="pagination-list">
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">1</a>
+          </li>
+          <li class="pagination-item  pagination-item--current">
+            <a class="pagination-link">2</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">3</a>
+          </li>
+          <li class="pagination-item">
+            <a class="pagination-link" href="#">4</a>
+          </li>
+        </ul>
+      </div>
       <!-- == / PAGINATION == -->
     </section>
     <!-- === / GOODS LIST === -->

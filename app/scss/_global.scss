@@ -55,7 +55,6 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 // === INDEX-COLUMNS ===
 .index-columns {
   // display: grid;
@@ -68,8 +67,7 @@ img {
   margin-bottom: 35px;
   color: $basic-black;
   background-color: $basic-extra-light;
-  background-image:
-    url("../img/line.png"),
+  background-image: url("../img/line.png"),
     url("../img/bg-noise-pattern-light.jpg");
   background-position: center, 0 0;
   background-repeat: no-repeat, repeat;
@@ -83,7 +81,6 @@ img {
   margin-bottom: 25px;
 }
 // === / INDEX-COLUMNS ===
-
 // === BUTTON ===
 .button {
   display: inline-block;
@@ -110,7 +107,6 @@ img {
   background-color: $basic-black;
 }
 // === / BUTTON ===
-
 // === BREADCRUMBS ===
 .breadcrumbs {
   // outline: 2px dotted goldenrod;
@@ -120,29 +116,89 @@ img {
   list-style: none;
   grid-column: 1 / -1;
   margin-bottom: 40px;
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
 
-  // .breadcrumbs__item--current
-  &__item--current {
-    color: $basic-dark;
+.breadcrumbs-item {
+  position: relative;
+  margin-right: 42px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    right: -25px;
+    width: 8px;
+    height: 8px;
+    background-color: $basic-black;
+    transform: rotate(45deg);
   }
-  // .breadcrumbs__link
-  &__link {
-    color: $basic-black;
+
+  &:last-child {
+    margin-right: 0;
   }
-  &__link:hover,
-  &__link:focus {
-    text-decoration: underline;
+}
+
+.breadcrumbs-item--current {
+  color: $basic-dark;
+
+  &::after {
+    display: none;
   }
+}
+
+.breadcrumbs-link {
+  color: $basic-black;
+}
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus {
+  text-decoration: underline;
 }
 // === / BREADCRUMBS ===
-
 // === PAGINATION ===
-.pagination {
+.pagination-list {
   // outline: 2px dotted royalblue;
   // outline-offset: -2px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.pagination-item {
+  margin-right: 5px;
+
+  &:last-child{
+    margin-right: 0;
+  }
+}
+
+.pagination-item--current {
+  .pagination-link,
+  .pagination-link:hover,
+  .pagination-link:focus,
+  .pagination-link:active {
+    color: $basic-black;
+    background-color: $basic-white;
+    cursor: default;
+  }
+}
+
+.pagination-link {
+  display: block;
+  padding: 10px 19px;
+  color: $basic-white;
+  background-color: $basic-black;
+}
+.pagination-link:hover,
+.pagination-link:focus,
+.pagination-link:active {
+  background-color: $special;
 }
 // === / PAGINATION ===
-
 // === MODAL ===
 .modal {
   display: none;
@@ -150,7 +206,6 @@ img {
   @include bg-pattern-light;
   box-shadow: $shadow-modal;
 }
-
 // =| LOG-IN |=
 .modal-login-title {
   margin: 0;
