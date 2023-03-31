@@ -170,6 +170,7 @@ img {
 
 .pagination-item {
   margin-right: 5px;
+  margin-bottom: 5px;
 
   &:last-child {
     margin-right: 0;
@@ -189,7 +190,9 @@ img {
 
 .pagination-link {
   display: block;
-  padding: 10px 19px;
+  padding: 13px 0;
+  width: 50px;
+  text-align: center;
   color: $basic-white;
   background-color: $basic-black;
 }
@@ -228,7 +231,7 @@ img {
   transition: transform $transition-normal ease-in;
 
   &:hover {
-    transform: rotate(90deg);
+    transform: rotate(180deg);
   }
 }
 
@@ -273,6 +276,7 @@ img {
 
   &:focus {
     border-color: $special;
+    outline: transparent;
   }
 }
 
@@ -284,19 +288,72 @@ img {
   background-image: url("../img/lock.svg");
 }
 
-.modal-login-help {
-  margin: 15px 0;
+.modal-login-form .modal-login-help {
+  margin: 13px 0 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-login-checkbox {
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.modal-login-help label:hover,
+.modal-login-help label:focus {
+  color: $special;
+}
+
+.modal-login-help label {
+  cursor: pointer;
+  position: relative;
+  padding-left: 32px;
+}
+
+.modal-login-help label::before {
+  content: "";
+  cursor: pointer;
+  position: absolute;
+  top: 2px;
+  left: 0;
+  border: 2px solid #000;
+  width: 16px;
+  height: 16px;
+}
+
+.modal-login-help:hover label::before,
+.modal-login-help:focus label::before {
+  border: 2px solid $special;
+}
+
+.modal-login-checkbox:checked + label::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  background-image: url("../img/cross.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+}
+
+.restore {
   color: $basic-black;
   text-decoration: underline;
 
   &:hover,
   &:focus {
     text-decoration: none;
+    color: $special;
   }
 }
 // =| MAP |=
 .modal-map {
-  display: block;
   width: 766px;
   height: 560px;
   border: 7px solid $basic-white;
@@ -310,3 +367,44 @@ img {
   }
 }
 // === / MODAL ===
+// === ANIMATIONS ===
+@keyframes bounce {
+  0% {
+    transform: translateY(-2000px);
+  }
+
+  70% {
+    transform: translateY(30px);
+  }
+
+  90% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+// === / ANIMATIONS ===
