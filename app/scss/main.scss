@@ -64,7 +64,7 @@
   color: $basic-white;
   display: block;
   padding: 25px 20px;
-  transition: background-color 0.2s;
+  transition: background-color $transition-faster;
 }
 
 .site-navigation-link:hover,
@@ -95,7 +95,7 @@
   background-repeat: no-repeat;
   background-position: 0 0;
   opacity: 0.3;
-  transition: opacity 0.2s;
+  transition: opacity $transition-faster;
 }
 
 .user-navigation-login-link:hover::before,
@@ -391,12 +391,12 @@
   height: 43px;
   background-color: $basic-black;
   color: inherit;
-  transition: background-color 0.3s;
+  transition: background-color $transition-fast;
 }
 
 .footer-social-icon {
   path {
-    transition: fill 0.3s;
+    transition: fill $transition-fast;
   }
 }
 
@@ -427,7 +427,7 @@
 
 .footer-copyright-button {
   margin-right: 0;
-  transition: all 0.3s;
+  transition: all $transition-fast;
 }
 
 .footer-copyright-button:hover,

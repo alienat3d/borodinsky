@@ -171,7 +171,7 @@ img {
 .pagination-item {
   margin-right: 5px;
 
-  &:last-child{
+  &:last-child {
     margin-right: 0;
   }
 }
@@ -201,12 +201,45 @@ img {
 // === / PAGINATION ===
 // === MODAL ===
 .modal {
-  display: none;
-  color: $basic-black;
   @include bg-pattern-light;
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  color: $basic-black;
   box-shadow: $shadow-modal;
 }
-// =| LOG-IN |=
+
+.modal-close {
+  position: absolute;
+  top: 9px;
+  right: -32px;
+  width: 19px;
+  height: 19px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url("../img/cross-gray.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  transition: transform $transition-normal ease-in;
+
+  &:hover {
+    transform: rotate(90deg);
+  }
+}
+
+// =| LOGIN |=
+.modal-login {
+  top: 120px;
+  bottom: auto;
+  width: 300px;
+  padding: 50px 80px;
+}
+
 .modal-login-title {
   margin: 0;
   margin-bottom: 20px;
@@ -217,40 +250,63 @@ img {
   margin-bottom: 10px;
 }
 
-.modal-login-paragraph {
+.modal-login-form p {
   margin: 0;
   margin-bottom: 10px;
 }
 
-.modal-login-input[type="email"],
-.modal-login-input[type="password"] {
+.modal-login-form input[type="email"],
+.modal-login-form input[type="password"] {
+  box-sizing: border-box;
+  width: 300px;
+  padding-top: 10px;
+  padding-right: 40px;
+  padding-bottom: 10px;
+  padding-left: 15px;
   font: inherit;
   color: $basic-black;
   text-transform: uppercase;
   background-color: $basic-extra-light;
   border: 2px solid $basic-black;
-}
-.modal-login-input:focus {
-  border-color: $special;
-}
-.modal-login-icon-user,
-.modal-login-icon-password {
   background-position: 270px center;
   background-repeat: no-repeat;
+
+  &:focus {
+    border-color: $special;
+  }
 }
+
 .modal-login-icon-user {
   background-image: url("../img/user.svg");
 }
+
 .modal-login-icon-password {
   background-image: url("../img/lock.svg");
 }
+
 .modal-login-help {
   margin: 15px 0;
   color: $basic-black;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
 }
-.modal-login-help:hover,
-.modal-login-help:focus {
-  text-decoration: none;
+// =| MAP |=
+.modal-map {
+  display: block;
+  width: 766px;
+  height: 560px;
+  border: 7px solid $basic-white;
+
+  iframe {
+    border: 0;
+  }
+
+  .modal-close {
+    right: -39px;
+  }
 }
 // === / MODAL ===
