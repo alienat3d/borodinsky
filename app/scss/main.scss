@@ -964,3 +964,19 @@
   }
 }
 // === / PAGE-PRICE ===
+// ==| Blank Page |==
+.wrapper-blank-page {
+  margin: 0 auto 30px;
+  padding: 20px 50px;
+  max-width: 430px;
+  background-image: url('../img/white-blank-page.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.blank-page-title,
+.blank-page-text {
+  margin: 10% 15%;
+  text-align: center;
+}

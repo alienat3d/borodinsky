@@ -1,7 +1,6 @@
 /* *, *::before, *::after { box-sizing: border-box; }
 body { margin: 0; } */
 
-
 a {
   text-decoration: none;
 }
@@ -220,6 +219,16 @@ img {
   box-shadow: $shadow-modal;
 }
 
+.login-page.modal {
+  display: block;
+  position: static;
+  box-shadow: none;
+
+  .modal-close {
+    display: none;
+  }
+}
+
 .modal-close {
   position: absolute;
   top: 9px;
@@ -241,7 +250,6 @@ img {
 
 // =| LOGIN |=
 .modal-login {
-  display: block;
   top: 120px;
   bottom: auto;
   width: 300px;

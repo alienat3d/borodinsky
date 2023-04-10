@@ -51,11 +51,12 @@ function sprite() {
 };
 
 function scss() {
-  return src(sourceFolder + '/scss/main.scss')
+  return src(sourceFolder + "/scss/main.scss")
     .pipe(sass())
-    .pipe(cleanCSS({level: 2}))
-    .pipe(dest(buildFolder + '/css'))
-    .pipe(sass().on('error', sass.logError))
+    .pipe(cleanCSS({ level: 2 }))
+    .pipe(rename("main.min.css"))
+    .pipe(dest(buildFolder + "/css"))
+    .pipe(sass().on("error", sass.logError));
 };
 
 function js() {
@@ -63,7 +64,7 @@ function js() {
     .pipe(webpackStream({
       mode: 'none',
       output: {
-        filename: 'main.js',
+        filename: 'main.min.js',
       },
       module: {
         rules: [

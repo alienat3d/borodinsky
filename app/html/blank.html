@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- -| Title |- -->
-  <title>Барбершоп «Бородинский» - Страница-заглушка</title>
+  <title>Барбершоп «Бородинский» • Страница формы ввода логина и пароля</title>
   <!-- -| Favicons |- -->
   <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -17,10 +17,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
-  <!-- -| CSS |- -->
-  <!-- <link href="https://raw.githubusercontent.com/elad2412/the-new-css-reset/main/css/reset.css" rel="stylesheet"> -->
-
-  <link href="css/main.css" rel="stylesheet">
+  <!-- -|| CSS ||- -->
+  <link href="css/main.min.css" rel="stylesheet">
+  <!-- -|| JAVASCRIPT ||- -->
+  <script src="js/main.min.js" defer></script>
 </head>
 
 <body class="page-body  inner-page">
@@ -29,34 +29,24 @@
   @@include('blocks/header-blank.html')
   <!-- === / HEADER === -->
 
-  <main class="content">
-    <h1 class="page-title">Пустая «Страница-заглушка»</h1>
+  <main class="page-body  inner-page  container">
+    <h1 class="page-title  visually-hidden">Пустая «страница-заглушка»</h1>
+    <!-- === BREADCRUMBS === -->
     <ul class="breadcrumbs">
-      <li>
-        <a href="index.html">Главная</a>
+      <li class="breadcrumbs-item">
+        <a class="breadcrumbs-link" href="index.html">Главная</a>
       </li>
-      <li class="breadcrumbs__current">
-        Пустая
-      </li>
+      <li class="breadcrumbs-item  breadcrumbs-item--current">Пустая «страница-заглушка»</li>
     </ul>
-    <p class="text">
-      Далеко-далеко за словесными горами в стране, гласных и согласных живут рыбные тексты. Силуэт, которой составитель.
-      Сих ipsum силуэт продолжил большого прямо букв они свое. Оксмокс свою, снова вдали деревни продолжил диких первую.
-    </p>
 
-    <!-- === SIGN-UP === -->
-    <section class="sign-up">
-      <h2 class="sign-up__title">
-        ЗАПИСАТЬСЯ
-      </h2>
-      <form class="sign-up__form">
-        <p class="sign-up__form-desc">
-          УКАЖИТЕ ЖЕЛАЕМУЮ ДАТУ И ВРЕМЯ И МЫ СВЯЖЕМСЯ С ВАМИ ДЛЯ ПОДТВЕРЖДЕНИЯ БРОНИ
-        </p>
-        <!-- Здесь будет форма записи -->
-      </form>
-    </section>
-    <!-- === / SIGN-UP === -->
+    <div class="wrapper-blank-page">
+      <h2 class="blank-page-title">Пустая «страница-заглушка»</h2>
+      <p class="blank-page-text">
+        Здесь пока нет никакого контента. <br>
+        Пожалуйста вернитесь на главную или другие страницы через верхнее навигационное меню.
+      </p>
+    </div>
+
   </main>
   <!-- === FOOTER === -->
   @@include('blocks/footer.html')

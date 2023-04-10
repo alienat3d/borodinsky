@@ -1,13 +1,18 @@
 "use strict";
 
-const loginLink = document.querySelector(".login-link");
-const loginPopup = document.querySelector(".modal-login");
+const loginLink = document.querySelector(".user-navigation-login-link");
+/* const loginPopup = document.querySelector(".modal-login");
 const loginClose = loginPopup.querySelector(".modal-close");
 const loginForm = loginPopup.querySelector("form");
 const loginLogin = loginPopup.querySelector("[name=login]");
-const loginPassword = loginPopup.querySelector("[name=password]");
+const loginPassword = loginPopup.querySelector("[name=password]"); */
 
-let isStorageSupport = true;
+loginLink.addEventListener('click', function (evt) {
+  evt.preventDefault();
+  console.log('Клик на меню «Вход»');
+});
+
+/* let isStorageSupport = true;
 let storage = "";
 
 try {
@@ -55,4 +60,4 @@ window.addEventListener("keydown", function (evt) {
       loginPopup.classList.remove("modal-error");
     }
   }
-});
+}); */

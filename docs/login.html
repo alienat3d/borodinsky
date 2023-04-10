@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html class="page" lang="ru">
 
-<head><!-- -| Meta |- -->
+<head>
+  <!-- -| Meta |- -->
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- -| Title |- -->
-  <title>Барбершоп «Бородинский» - Набор для путешествий «Baxter of California»</title>
+  <title>Барбершоп «Бородинский» • Страница формы ввода логина и пароля</title>
   <!-- -| Favicons |- -->
   <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -17,9 +18,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <!-- -|| CSS ||- -->
-  <link href="css/main.min.css?t=1681159726516" rel="stylesheet">
-  <!-- -|| JAVASCRIPT ||- -->
-  <script src="js/main.min.js?t=1681159726516" defer></script>
+  <link href="css/main.min.css?t=1681159726512" rel="stylesheet">
 </head>
 
 <body class="page-body  inner-page">
@@ -40,8 +39,8 @@
       <li class="site-navigation-item">
         <a class="site-navigation-link" href="price.html">Прайс-лист</a>
       </li>
-      <li class="site-navigation-item  site-navigation-item--current">
-        <a class="site-navigation-link" href="">Магазин</a>
+      <li class="site-navigation-item">
+        <a class="site-navigation-link" href="catalogue.html">Магазин</a>
       </li>
       <li class="site-navigation-item">
         <a class="site-navigation-link" href="blank.html">Контакты</a>
@@ -54,75 +53,39 @@
 </header>
   <!-- === / HEADER === -->
 
-  <main class="container">
-    <h1 class="title  page-title">Набор для путешествий «Baxter of California»</h1>
+  <main class="inner-page  container">
+    <h1 class="page-title  visually-hidden">Страница формы ввода логина и пароля</h1>
     <!-- === BREADCRUMBS === -->
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html">Главная</a>
       </li>
-      <li class="breadcrumbs-item">
-        <a class="breadcrumbs-link" href="catalogue.html">Магазин</a>
-      </li>
-      <li class="breadcrumbs-item">
-        <a class="breadcrumbs-link" href="catalogue.html">Средства для ухода</a>
-      </li>
-      <li class="breadcrumbs-item  breadcrumbs-item--current">Набор для путешествий «Baxter of California»</li>
+      <li class="breadcrumbs-item  breadcrumbs-item--current">Страница формы ввода логина и пароля</li>
     </ul>
-    <!-- === / BREADCRUMBS === -->
 
-    <h2 class="visually-hidden">Описание товара - набор для путешествий «Baxter of California»</h2>
-    <div class="page-product">
-      <!-- === PRODUCT-GALLERY === -->
-      <section class="product-gallery">
-        <h2 class="visually-hidden">Изображения товара</h2>
-        <a class="product-gallery-full-link" href="#">
-          <img class="product-gallery-full-pic" src="img/content/product-big.jpg" width="460" height="498"
-            alt="Крупное фото товара - Набор для путешествий «Baxter of California»">
-        </a>
-        <ul class="product-gallery-preview">
-          <li class="product-gallery-preview-item">
-            <img class="product-gallery-small" src="img/content/product-small-1.jpg" width="140" height="149"
-              alt="Фото товара в анфас - Набор для путешествий «Baxter of California»">
-          </li>
-          <li class="product-gallery-preview-item">
-            <img class="product-gallery-small" src="img/content/product-small-2.jpg" width="140" height="149"
-              alt="Фото товара в профиль - Набор для путешествий «Baxter of California»">
-          </li>
-          <li class="product-gallery-preview-item">
-            <img class="product-gallery-small" src="img/content/product-small-3.jpg" width="140" height="149"
-              alt="Фото отдельной части товара - Набор для путешествий «Baxter of California»">
-          </li>
-        </ul>
-      </section>
-      <!-- === / PRODUCT-GALLERY === -->
-      <!-- === PRODUCT-INFO === -->
-      <section class="product-info">
-        <h2 class="visually-hidden">Описание товара</h2>
-        <div class="product-description">
-          <p class="product-availability">ЕСТЬ В НАЛИЧИИ</p>
-          <p class="product-article-id">АРТИКУЛ:DEXTER-AE</p>
-        </div>
-        <p class="product-text">
-          Travel Kit – необходимый аксессуар во время любого путешествия. В аккуратной кожаной сумке находится все, что
-          нужно для бритья и ухода за кожей во время рабочей поездки или отдыха: средство для умывания, увлажняющий
-          крем, крем для бритья, крем после бритья, шампунь. Набор также может стать отличным подарком.
+    <section class="login-page  modal  modal-login  modal-show">
+      <h2 class="title  modal-login-title">Личный кабинет</h2>
+      <p class="modal-login-description">Введите пожалуйста свой логин и пароль</p>
+      <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
+        <p>
+          <label class="visually-hidden" for="login-login">Логин</label>
+          <input id="login-login" class="modal-login-icon-user" type="email" name="login"
+            placeholder="ivan.primerov@yandex.ru" />
         </p>
-        <p class="product-price">
-          <b>2 900 ₽</b>
-          <button class="button  product-buy-button" type="button">КУПИТЬ</button>
+        <p>
+          <label class="visually-hidden" for="login-password">Пароль</label>
+          <input id="login-password" class="modal-login-icon-password" type="password" name="password"
+            placeholder="••••••••" />
         </p>
-        <h3 class="product-compound-title">В набор входят:</h3>
-        <ul class="product-compound-list">
-          <li class="product-compound-list-item">Средство для умывания (50 мл)</li>
-          <li class="product-compound-list-item">Увлажняющий крем (50 мл)</li>
-          <li class="product-compound-list-item">Крем для бритья (50 мл)</li>
-          <li class="product-compound-list-item">Крем после бритья, шампунь (50 мл)</li>
-          <li class="product-compound-list-item">Удобная кожаная косметичка</li>
-        </ul>
-      </section>
-      <!-- === / PRODUCT-INFO === -->
-    </div>
+        <p class="modal-login-help">
+          <input class="visually-hidden  modal-login-checkbox" id="remember" type="checkbox" name="remember" />
+          <label for="remember">Запомните меня</label>
+          <a class="restore" href="#">Я забыл пароль!</a>
+        </p>
+        <button class="button  modal-login-login-btn" type="submit">Войти</button>
+      </form>
+      <button class="modal-close" type="button" aria-label="Закрыть"></button>
+    </section>
 
   </main>
   <!-- === FOOTER === -->
@@ -176,45 +139,6 @@
   </div>
 </footer>
   <!-- === / FOOTER === -->
-
-  <!-- === LOG-IN POP-UP === -->
-  <section class="modal  modal-login  modal-show">
-  <h2 class="title  modal-login-title">Личный кабинет</h2>
-  <p class="modal-login-description">Введите пожалуйста свой логин и пароль</p>
-  <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
-    <p>
-      <label class="visually-hidden" for="login-login">Логин</label>
-      <input id="login-login" class="modal-login-icon-user" type="email" name="login"
-        placeholder="ivan.primerov@yandex.ru" />
-    </p>
-    <p>
-      <label class="visually-hidden" for="login-password">Пароль</label>
-      <input id="login-password" class="modal-login-icon-password" type="password" name="password"
-        placeholder="••••••••" />
-    </p>
-    <p class="modal-login-help">
-      <input class="visually-hidden  modal-login-checkbox" id="remember" type="checkbox" name="remember" />
-      <label for="remember">Запомните меня</label>
-      <a class="restore" href="#">Я забыл пароль!</a>
-    </p>
-    <button class="button  modal-login-login-btn" type="submit">Войти</button>
-  </form>
-  <button class="modal-close" type="button" aria-label="Закрыть"></button>
-</section>
-  <!-- === / LOG-IN POP-UP === -->
-
-  <!-- === MAP POP-UP === -->
-  <section class="modal  modal-map">
-  <h2 class="visually-hidden">Как до нас добраться</h2>
-  <iframe
-    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.320858716166196!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1674452820742!5m2!1sru!2sru"
-    width="766" height="560" allowfullscreen title="Офис компании по адресу: г. Санкт-Петербург, Б. Конюшенная, д. 19/8" loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"></iframe>
-  <!-- <img src="img/map.png" width="766" height="560"
-    alt="Офис компании по адресу: г. Санкт-Петербург, Б. Конюшенная, д. 19/8"> -->
-  <button class="modal-close  modal-map-close-btn" aria-label="Закрыть"></button>
-</section>
-  <!-- === / MAP POP-UP === -->
 
 </body>
 
