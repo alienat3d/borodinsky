@@ -42,9 +42,6 @@
 }
 
 .site-navigation {
-  // outline: 2px dotted aquamarine;
-  // outline-offset: -2px;
-
   display: flex;
   flex-wrap: wrap;
   width: 620px;
@@ -52,10 +49,19 @@
   padding: 0;
   list-style: none;
   min-height: 70px;
+}
 
-  .site-navigation-item--current {
+.site-navigation-item {
+  position: relative;
+
+  &--current {
     border-bottom: 4px solid $basic-white;
     background-color: $basic-black;
+
+    &:hover,
+    &:focus {
+      background-color: transparent;
+    }
   }
 }
 
@@ -74,9 +80,12 @@
   background-color: $basic-extra-dark;
 }
 
+.site-navigation.site-navigation-item--current:hover,
+.site-navigation.site-navigation-item--current:focus {
+  background-color: $basic-black;
+}
+
 .user-navigation {
-  // outline: 2px dotted orangered;
-  // outline-offset: -2px;
   max-width: 140px;
 }
 
@@ -104,6 +113,11 @@
   opacity: 1;
 }
 // === / HEADER ===
+// === PAGE-INDEX ===
+.page-index {
+  margin-bottom: 15px;
+}
+// === / PAGE-INDEX ===
 // === FEATURES ===
 .features {
   // outline: 2px dotted orange;
@@ -290,6 +304,17 @@
   display: block;
   margin-bottom: 9px;
   margin-left: 15px;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $special;
+
+    .appointment-input {
+      border-color: $special;
+      outline: $special;
+    }
+  }
 }
 
 .appointment-input {
@@ -306,7 +331,7 @@
 .appointment-input::placeholder {
   text-overflow: ellipsis;
 }
-
+.appointment-input:hover,
 .appointment-input:focus,
 .appointment-input:active {
   border-color: $special;
@@ -325,7 +350,6 @@
   // outline: 2px dotted red;
   // outline-offset: -2px;
   padding: 60px 0;
-  margin-top: 65px;
   color: $basic-white;
   @include bg-pattern-dark;
 }
@@ -448,7 +472,13 @@
 // -|| Inner Page (additional pages edits) ||-
 // -| Header Logo |-
 .logo {
-  margin-right: 20px;
+  padding: 25px 20px 22px 0;
+  transition: background-color $transition-faster;
+
+  &:hover,
+  &:focus {
+    background-color: $basic-extra-dark;
+  }
 }
 
 .inner-page {
@@ -485,6 +515,7 @@
 .page-catalogue {
   // outline: 2px dotted rebeccapurple;
   // outline-offset: -2px;
+  margin-bottom: 45px;
   display: grid;
   grid-template-columns: 180px 1fr;
   column-gap: 60px;
@@ -672,6 +703,7 @@
 .page-product {
   // outline: 2px dotted palevioletred;
   // outline-offset: -2px;
+  margin-bottom: 30px;
   display: grid;
   grid-template-columns: 460px 1fr;
   align-content: start;
@@ -798,3 +830,137 @@
   }
 }
 // === / PRODUCT-INFO ===
+// === PAGE-PRICE ===
+// ==| From CMS editable text content |==
+.inner-content {
+  margin-bottom: 77px;
+
+  h2 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: $font-md;
+    line-height: 30px;
+  }
+
+  h3 {
+    margin-top: 60px;
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+
+  h2 + h3 {
+    margin-top: 30px;
+  }
+
+  p {
+    margin: 14px 0;
+  }
+
+  table {
+    border-collapse: collapse;
+  }
+
+  td {
+    padding: 10px 15px;
+    border: 2px solid $basic-black;
+  }
+}
+// ==| inner-columns |==
+.inner-columns {
+  // outline: 2px dotted salmon;
+  // outline-offset: -2px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 60px 0;
+
+  & > h3:first-child {
+    // outline: 4px dotted green;
+    // outline-offset: -4px;
+    margin-top: 0;
+    width: 100%;
+  }
+
+  p {
+    max-width: 380px;
+  }
+}
+
+.inner-column-left,
+.inner-column-right {
+  // outline: 4px dotted blue;
+  // outline-offset: -4px;
+  width: 460px;
+}
+.inner-column-left *:first-child,
+.inner-column-right *:first-child {
+  margin-top: 0;
+}
+.inner-column-left *:last-child,
+.inner-column-right *:last-child {
+  margin-bottom: 0;
+}
+// ==| big-heading |==
+.inner-content .big-heading {
+  display: flex;
+  align-items: center;
+  margin-top: 55px;
+  margin-bottom: 65px;
+  font-size: 48px;
+  line-height: 48px;
+  // text-align: center;
+
+  &::before,
+  &::after {
+    content: "";
+    // display: block;
+    // width: 180px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 2px;
+    background-color: $basic-black;
+  }
+
+  &::before {
+    margin-right: 28px;
+  }
+
+  &::after {
+    margin-left: 28px;
+  }
+}
+// ==| custom-list-1 |==
+.custom-list-1 {
+  margin: 14px 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 20px;
+  }
+  li::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    width: 8px;
+    height: 8px;
+    background-color: $basic-black;
+    transform: rotate(45deg);
+  }
+}
+// ==| custom-table-1 |==
+.custom-table-1 {
+  width: 100%;
+
+  td {
+    width: 50%;
+  }
+  td:last-child {
+    text-align: center;
+  }
+}
+// === / PAGE-PRICE ===

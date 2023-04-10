@@ -3,3 +3,6 @@ FIXME:
 
 TODO:
 -> Modal-map pops-up on <address> click.
+
+TODO:
+-> Проверить текст и заменить "е" на "ё".

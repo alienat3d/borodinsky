@@ -1,3 +1,7 @@
+/* *, *::before, *::after { box-sizing: border-box; }
+body { margin: 0; } */
+
+
 a {
   text-decoration: none;
 }
@@ -28,7 +32,7 @@ img {
   text-transform: uppercase;
   background-color: $basic-black;
   background-image: url("../img/background.jpg");
-  background-position: top center;
+  background-position: 50% 0;
   background-repeat: no-repeat;
 }
 // -|* Container *|-
@@ -55,7 +59,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-// === INDEX-COLUMNS ===
+// === INDEX COLUMNS ===
 .index-columns {
   // display: grid;
   // grid-template-columns: 1fr 1fr;
@@ -237,6 +241,7 @@ img {
 
 // =| LOGIN |=
 .modal-login {
+  display: block;
   top: 120px;
   bottom: auto;
   width: 300px;

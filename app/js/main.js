@@ -1,3 +1,4 @@
+import {} from "./scripts/setDatePlaceholder";
 // [index.html] Sets current date of user’s PC as a placeholder for appointment form’s date input.
 import { setDatePlaceholder } from "./scripts/setDatePlaceholder";
 setDatePlaceholder();
