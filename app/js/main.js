@@ -1,4 +1,7 @@
-import {  } from "./scripts/login";
+// Scripts for login popup.
+import {  } from "./scripts/loginPopup";
+// Scripts for map popup.
+import {  } from "./scripts/mapPopup";
 // [index.html] Sets current date of user’s PC as a placeholder for appointment form’s date input.
 import { setDatePlaceholder } from "./scripts/setDatePlaceholder";
 setDatePlaceholder();

@@ -18,9 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <!-- -|| CSS ||- -->
-  <link href="css/main.min.css?t=1681159726498" rel="stylesheet">
+  <link href="css/main.min.css?t=1681263264471" rel="stylesheet">
   <!-- -|| JAVASCRIPT ||- -->
-  <script src="js/main.min.js?t=1681159726498" defer></script>
+  <script src="js/main.min.js?t=1681263264471" defer></script>
 </head>
 
 <body class="page-body  inner-page">
@@ -83,7 +83,7 @@
       <address class="footer-contacts-address">
         Адрес: г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
       </address>
-      <a class="footer-contacts-link" href="blank.html">Как нас найти?</a>
+      <a class="footer-contacts-link  contacts-button-map" href="map.html">Как нас найти?</a>
       Телефон: <a class="footer-contacts-phone" href="tel:+78126660266">+7 (812) 666-02-66</a>
     </section>
     <section class="footer-social">
@@ -127,7 +127,7 @@
   <!-- === / FOOTER === -->
 
   <!-- === LOG-IN POP-UP === -->
-  <section class="modal  modal-login  modal-show">
+  <section class="modal  modal-login">
   <h2 class="title  modal-login-title">Личный кабинет</h2>
   <p class="modal-login-description">Введите пожалуйста свой логин и пароль</p>
   <form class="modal-login-form" action="https://echo.htmlacademy.ru" method="post">
@@ -138,15 +138,14 @@
     </p>
     <p>
       <label class="visually-hidden" for="login-password">Пароль</label>
-      <input id="login-password" class="modal-login-icon-password" type="password" name="password"
-        placeholder="••••••••" />
+      <input id="login-password" class="modal-login-icon-password" type="password" name="password" placeholder="••••••••" />
     </p>
     <p class="modal-login-help">
       <input class="visually-hidden  modal-login-checkbox" id="remember" type="checkbox" name="remember" />
       <label for="remember">Запомните меня</label>
       <a class="restore" href="#">Я забыл пароль!</a>
     </p>
-    <button class="button  modal-login-login-btn" type="submit">Войти</button>
+    <button class="button" type="submit">Войти</button>
   </form>
   <button class="modal-close" type="button" aria-label="Закрыть"></button>
 </section>
