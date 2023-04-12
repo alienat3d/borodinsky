@@ -242,8 +242,6 @@
 // === / GALLERY ===
 // ===  CONTACTS ===
 .contacts {
-  // outline: 2px dotted blueviolet;
-  // outline-offset: -2px;
   width: 380px;
 }
 
@@ -830,6 +828,31 @@
   }
 }
 // === / PRODUCT-INFO ===
+// === PAGE-CONTACTS ===
+.contacts-page-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .contacts {
+    width: 100%;
+  }
+
+  .contacts-title {
+    text-align: center;
+  }
+
+  .inner-columns {
+    justify-content: space-around;
+  }
+
+  .inner-column-left,
+  .inner-column-right {
+    width: 298px;
+  }
+}
+
+// === / PAGE-CONTACTS ===
 // === PAGE-PRICE ===
 // ==| From CMS editable text content |==
 .inner-content {
@@ -969,7 +992,7 @@
   margin: 0 auto 30px;
   padding: 20px 50px;
   max-width: 430px;
-  background-image: url('../img/white-blank-page.svg');
+  background-image: url("../img/white-blank-page.svg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;

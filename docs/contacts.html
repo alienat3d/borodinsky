@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- -| Title |- -->
-  <title>Барбершоп «Бородинский» • Страница формы ввода логина и пароля</title>
+  <title>Барбершоп «Бородинский» • Страница контактов</title>
   <!-- -| Favicons |- -->
   <link rel="icon" href="favicon.ico"><!-- 32×32 -->
   <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
@@ -18,9 +18,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
   <!-- -|| CSS ||- -->
-  <link href="css/main.min.css?t=1681267104206" rel="stylesheet">
+  <link href="css/main.min.css?t=1681267104215" rel="stylesheet">
   <!-- -|| JAVASCRIPT ||- -->
-  <script src="js/main.min.js?t=1681267104206" defer></script>
+  <script src="js/main.min.js?t=1681267104215" defer></script>
 </head>
 
 <body class="page-body  inner-page">
@@ -44,8 +44,8 @@
       <li class="site-navigation-item">
         <a class="site-navigation-link" href="catalogue.html">Магазин</a>
       </li>
-      <li class="site-navigation-item">
-        <a class="site-navigation-link" href="contacts.html">Контакты</a>
+      <li class="site-navigation-item  site-navigation-item--current">
+        <a class="site-navigation-link" href="">Контакты</a>
       </li>
     </ul>
     <div class="user-navigation">
@@ -56,21 +56,46 @@
   <!-- === / HEADER === -->
 
   <main class="page-body  inner-page  container">
-    <h1 class="page-title  visually-hidden">Пустая «страница-заглушка»</h1>
+    <h1 class="page-title  visually-hidden">Страница контактов</h1>
     <!-- === BREADCRUMBS === -->
     <ul class="breadcrumbs">
       <li class="breadcrumbs-item">
         <a class="breadcrumbs-link" href="index.html">Главная</a>
       </li>
-      <li class="breadcrumbs-item  breadcrumbs-item--current">Пустая «страница-заглушка»</li>
+      <li class="breadcrumbs-item  breadcrumbs-item--current">Страница контактов</li>
     </ul>
 
-    <div class="wrapper-blank-page">
-      <h2 class="blank-page-title">Пустая «страница-заглушка»</h2>
-      <p class="blank-page-text">
-        Здесь пока нет никакого контента. <br>
-        Пожалуйста вернитесь на главную или другие страницы через верхнее навигационное меню.
-      </p>
+    <div class="contacts-page-wrapper">
+      <!-- === CONTACTS === -->
+      <section class="contacts">
+        <h2 class="title  contacts-title">Контактная информация</h2>
+        <div class="inner-columns">
+          <div class="inner-column-left">
+            <p class="contacts-name">Барбершоп «Бородинский»</p>
+            <address class="contacts-address">Адрес: г. Санкт-Петербург, Б. Конюшенная, д. 19/8</address>
+            <a class="contacts-phone" href="tel:+78126660266">Телефон: +7 (812) 666-02-66</a>
+          </div>
+          <div class="inner-column-right">
+            <p class="contacts-text">
+              Время работы:<br>
+              пн—пт: с 10:00 до 22:00 сб—вс: с 10:00 до 19:00
+            </p>
+          </div>
+        </div>
+      </section>
+      <!-- === / CONTACTS === -->
+      <!-- === MAP === -->
+      <section class="modal  modal-map  modal-page">
+        <h2 class="visually-hidden">Карта проезда</h2>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253003151!2d30.320858716166196!3d59.9387191690541!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1674452820742!5m2!1sru!2sru"
+          width="766" height="560" allowfullscreen
+          title="Офис компании по адресу: г. Санкт-Петербург, Б. Конюшенная, д. 19/8" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <!-- <img src="img/map.png" width="766" height="560"
+      alt="Офис компании по адресу: г. Санкт-Петербург, Б. Конюшенная, д. 19/8"> -->
+      </section>
+      <!-- === / MAP === -->
     </div>
 
   </main>
