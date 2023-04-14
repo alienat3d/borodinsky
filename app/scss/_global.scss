@@ -62,8 +62,6 @@ img {
 .index-columns {
   // display: grid;
   // grid-template-columns: 1fr 1fr;
-  // outline: 2px dotted greenyellow;
-  // outline-offset: -2px;
   display: flex;
   justify-content: space-between;
   padding: 50px 80px;
@@ -112,8 +110,6 @@ img {
 // === / BUTTON ===
 // === BREADCRUMBS ===
 .breadcrumbs {
-  // outline: 2px dotted goldenrod;
-  // outline-offset: -2px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -162,8 +158,6 @@ img {
 // === / BREADCRUMBS ===
 // === PAGINATION ===
 .pagination-list {
-  // outline: 2px dotted royalblue;
-  // outline-offset: -2px;
   display: flex;
   flex-wrap: wrap;
   padding: 0;

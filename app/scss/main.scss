@@ -6,8 +6,6 @@
 // === / -| IMPORTS |-  === //
 // === HEADER ===
 .main-header {
-  // outline: 2px dotted green;
-  // outline-offset: -2px;
   margin-bottom: 70px;
 }
 
@@ -27,8 +25,6 @@
 }
 
 .main-header-logo {
-  // outline: 2px dotted palevioletred;
-  // outline-offset: -2px;
   width: 368px;
   height: 153px;
   order: 2;
@@ -120,8 +116,6 @@
 // === / PAGE-INDEX ===
 // === FEATURES ===
 .features {
-  // outline: 2px dotted orange;
-  // outline-offset: -2px;
   margin-bottom: 80px;
 }
 // As alternative Flexbox realization commented. Although grid is a more elegant solution.
@@ -137,8 +131,6 @@
 }
 
 .features-item {
-  // outline: 2px dotted yellow;
-  // outline-offset: -2px;
   // margin-right: 20px;
   // margin-bottom: 20px;
 
@@ -173,8 +165,6 @@
 // === / FEATURES ===
 // === NEWS ===
 .news {
-  // outline: 2px dotted coral;
-  // outline-offset: -2px;
   width: 380px;
 }
 
@@ -199,15 +189,10 @@
 // === / NEWS ===
 // === GALLERY ===
 .gallery {
-  // outline: 2px dotted gold;
-  // outline-offset: -2px;
   width: 300px;
 }
 
 .gallery-container {
-  // outline: 2px dotted peru;
-  // outline-offset: -2px;
-
   position: relative;
   height: 260px;
 }
@@ -273,8 +258,6 @@
 // === / CONTACTS ===
 // === APPOINTMENT ===
 .appointment {
-  // outline: 2px dotted brown;
-  // outline-offset: -2px;
   width: 300px;
 }
 
@@ -290,9 +273,6 @@
 }
 
 .appointment-item {
-  // outline: 2px dotted cornflowerblue;
-  // outline-offset: -2px;
-
   width: 140px;
   margin-top: 0;
   margin-bottom: 10px;
@@ -345,8 +325,6 @@
 // === / APPOINTMENT ===
 // === FOOTER ===
 .footer {
-  // outline: 2px dotted red;
-  // outline-offset: -2px;
   padding: 60px 0;
   color: $basic-white;
   @include bg-pattern-dark;
@@ -358,8 +336,6 @@
 }
 
 .footer-contacts {
-  // outline: 2px dotted violet;
-  // outline-offset: -2px;
   margin: 0;
   width: 320px;
 }
@@ -389,8 +365,6 @@
 }
 
 .footer-social {
-  // outline: 2px dotted cadetblue;
-  // outline-offset: -2px;
   width: 145px;
   justify-self: center;
   text-align: center;
@@ -442,8 +416,6 @@
 }
 
 .footer-copyright {
-  // outline: 2px dotted burlywood;
-  // outline-offset: -2px;
   max-width: 150px;
   margin: 0;
   justify-self: end;
@@ -503,16 +475,12 @@
 }
 
 .page-title {
-  // outline: 2px dotted orchid;
-  // outline-offset: -2px;
   margin: 0;
   margin-bottom: 15px;
   padding: 0;
 }
 
 .page-catalogue {
-  // outline: 2px dotted rebeccapurple;
-  // outline-offset: -2px;
   margin-bottom: 45px;
   display: grid;
   grid-template-columns: 180px 1fr;
@@ -525,8 +493,6 @@
 }
 // === FILTERS ===
 .filters {
-  // outline: 2px dotted yellowgreen;
-  // outline-offset: -2px;
   width: 180px;
 }
 
@@ -699,8 +665,6 @@
 // === / CATALOGUE ===
 // === PAGE-PRODUCT ===
 .page-product {
-  // outline: 2px dotted palevioletred;
-  // outline-offset: -2px;
   margin-bottom: 30px;
   display: grid;
   grid-template-columns: 460px 1fr;
@@ -751,8 +715,6 @@
 // === / PRODUCT-GALLERY ===
 // === PRODUCT-INFO ===
 .product-info {
-  // outline: 2px dotted darkslategrey;
-  // outline-offset: -2px;
   width: 390px;
   padding-top: 23px;
   padding-left: 80px;
@@ -891,16 +853,12 @@
 }
 // ==| inner-columns |==
 .inner-columns {
-  // outline: 2px dotted salmon;
-  // outline-offset: -2px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   margin: 60px 0;
 
   & > h3:first-child {
-    // outline: 4px dotted green;
-    // outline-offset: -4px;
     margin-top: 0;
     width: 100%;
   }
@@ -912,8 +870,6 @@
 
 .inner-column-left,
 .inner-column-right {
-  // outline: 4px dotted blue;
-  // outline-offset: -4px;
   width: 460px;
 }
 .inner-column-left *:first-child,
