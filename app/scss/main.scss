@@ -51,7 +51,7 @@
   position: relative;
 
   &--current {
-    border-bottom: 4px solid $basic-white;
+    border-bottom: 5px solid $basic-white;
     background-color: $basic-black;
 
     &:hover,
@@ -245,7 +245,7 @@
 }
 
 .contacts-text {
-  width: 160px;
+  width: 150px;
 }
 
 .contacts-address {
